@@ -1,0 +1,11 @@
+# Physical behavior, locomotion and kinematic impact
+
+Automatic profile selection/mapping remains INTERFACE_ONLY. Version 1.9 adds a separate [explicit action expression](action-expression.md) path: authored distance/time/body-scale motion and authored horizontal contact consequences execute through existing kernels. It does not infer reactions from mass classes, add a force solver, implement new locomotion categories, or promote the automatic profile contracts below.
+
+Status of the original general profile contract: INTERFACE_ONLY. Profile and locomotion validation/routing exist; physical-to-motion mapping and new locomotion execution are NOT_IMPLEMENTED_RUNTIME. HUMAN routes to existing Sprint008 explicit intensity/action-trend parameters without inventing numeric defaults. Other categories stop at their contracts, not a HUMAN fallback.
+
+Physical fields: body_scale, mass_class, independent mobility_class, locomotion_type, current_load, acceleration_capacity, cruise_profile, stopping_response, turn_response, impact_response, aerial_capability, story_intent and surface. Relative mass classes are VERY_LIGHT/LIGHT/MEDIUM/MEDIUM_HEAVY/HEAVY/VERY_HEAVY. Heavy + Agile is valid. Do not infer exact kilograms from a picture. Story Intent + Locomotion + Mass + Mobility + Load + Surface govern author decisions; heavy does not necessarily mean slow.
+
+Locomotion types: HUMAN / AGILE_HUMAN / QUADRUPED / VEHICLE / FLYING / FLOATING / CREATURE. Each contract records acceleration envelope, cruise range, turn radius, stopping distance, vertical mobility, bank/turn tendency and support mode. Template numbers are synthetic examples, not reusable physical calibration. Non-HUMAN runtime_binding must remain NOT_IMPLEMENTED_RUNTIME.
+
+KINEMATIC_IMPACT_RESPONSE inputs mass classes A/B, relative velocity, contact direction, support state and contact type. Director-authored candidate outputs are NO_EFFECT / LIGHT_REACTION / BODY_SHIFT / STEP_BACK / SLIDE / ROTATE / KNOCKBACK / FALL_CANDIDATE. This round validates records; it does not automatically select or compute responses. Bind to Sprint005 Momentum, Sprint004 Support and Sprint010 Contact Intent, preserving their evidence limits. No conservation solver, friction, rigid body, hand IK or force model is introduced.

@@ -1,0 +1,83 @@
+{
+  "project_id": "MY_PROJECT",
+  "stage": "analysis_opening",
+  "stage_options": [
+    "assets_only",
+    "analysis_opening",
+    "route_position_confirmation",
+    "full_sequence",
+    "scoped_revision"
+  ],
+  "blocking_review": {
+    "plan": "story-blocking-plan.json",
+    "diagrams": "blocking-review/review.html",
+    "decision": "blocking-decision.json",
+    "status": "pending",
+    "required_scope": "whole_story_routes_and_key_positions"
+  },
+  "baseline": {
+    "blend": "approved-opening.blend",
+    "sha256": "RECORD_ACTUAL_HASH",
+    "scene": "Scene",
+    "approval": "Record what the user approved and when"
+  },
+  "conventions": {
+    "fps": 24,
+    "units": "scene-adapted meters; confirm from source",
+    "up": "+Z",
+    "character_forward": "CONFIRM_FROM_ASSET",
+    "source_conversion": "record source units/axes if imported"
+  },
+  "primary_actors": [
+    "HERO",
+    "MENTOR"
+  ],
+  "source_authority": [
+    {
+      "field": "edit_order_and_dialogue",
+      "source": "latest-shot-table",
+      "status": "source_fact",
+      "conflict": "record obsolete rows/inserts"
+    },
+    {
+      "field": "composition",
+      "source": "storyboard.pdf",
+      "status": "source_fact",
+      "match_rule": "content plus source IDs"
+    },
+    {
+      "field": "initial_positions_and_routes",
+      "source": "annotated-scene-views",
+      "status": "director_confirmed"
+    },
+    {
+      "field": "lens_and_travel_speed",
+      "source": "layout-estimate",
+      "status": "proposed"
+    }
+  ],
+  "approved_constraints": [
+    "Record exact retained colors, positions, route and timing constraints"
+  ],
+  "feedback_log": [
+    {
+      "feedback": "Example: move the whole waiting group to the marked shared origin",
+      "old_assumption": "second group already at destination",
+      "replacement": "shared start, common path then branch",
+      "affected": [
+        "blocking",
+        "route_budget",
+        "camera",
+        "timing",
+        "actor_animation",
+        "captions",
+        "render_receipts"
+      ],
+      "preserve": [
+        "character_assets",
+        "identity_colors",
+        "approved_sun"
+      ]
+    }
+  ]
+}

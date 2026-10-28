@@ -1,0 +1,41 @@
+{
+  "contract": "revision-record",
+  "contract_version": "SYSTEM/2",
+  "revision_id": "R001",
+  "source_message": "Move the group behind the observer in SH01.",
+  "source_version": "L001",
+  "target_scene": "SC01",
+  "target_shots": [
+    "SH01"
+  ],
+  "original_intent": "Observe then regroup",
+  "requested_change": "Change ending position",
+  "allowed_channels": [
+    "blocking",
+    "motion"
+  ],
+  "protected_channels": [
+    "camera",
+    "lighting"
+  ],
+  "dependent_shots": [
+    "SH02"
+  ],
+  "continuity_dependencies": [
+    {
+      "from_shot": "SH01",
+      "to_shot": "SH02",
+      "channels": [
+        "blocking"
+      ]
+    }
+  ],
+  "lighting_dependencies": [],
+  "required_outputs": [
+    {
+      "view": "IDENTITY_COLOR_LAYOUT",
+      "style": "CLEAN"
+    }
+  ],
+  "validation_evidence": []
+}

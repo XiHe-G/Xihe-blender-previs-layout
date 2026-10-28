@@ -1,0 +1,49 @@
+{
+  "contract": "prop-interaction",
+  "contract_version": "SYSTEM/2",
+  "prop_id": "PROP_A",
+  "prop_type": "STAFF",
+  "mass_class": "LIGHT",
+  "size": [
+    0.05,
+    0.05,
+    1.5
+  ],
+  "com_offset": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "carry_mode": "GROUND_SUPPORTING",
+  "grip_mode": "HAND_GRIP",
+  "contact_points": [
+    {
+      "id": "GRIP",
+      "role": "GRIP",
+      "position": [
+        0.0,
+        0.0,
+        0.8
+      ]
+    },
+    {
+      "id": "TIP",
+      "role": "SUPPORT",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "attachment_point": "HAND_R",
+  "orientation_constraint": "VERTICAL_OR_DIAGONAL",
+  "reach": 1.5,
+  "support_function": "GROUND_CONTACT",
+  "motion_lag": 0.0,
+  "interaction_rules": [
+    "RELEASE_BEFORE_TRANSFER"
+  ],
+  "control_ref": "csp.json#/prop_control",
+  "support_ref": "csp.json#/support"
+}

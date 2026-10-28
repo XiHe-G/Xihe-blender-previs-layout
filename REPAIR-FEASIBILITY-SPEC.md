@@ -1,0 +1,17 @@
+# REPAIR-FEASIBILITY/1.0
+
+输入：原Graph、原CSP、原Proposal及所选的待预览strategy_id、原Expected、measurement binding、原Checker report、原Trace、Override registry，以及隔离候选的假设Trace。来源SHA必须新鲜。输出有proposal_id/proposal_sha256、strategy_id、status、reasons、impact_graph、constraint_collisions、target_result、predicted_screen、unknown_observables、protected_content_result和测量指纹。
+
+状态仅为FEASIBLE / FEASIBLE_WITH_RISK / HIGH_RISK / INFEASIBLE / NOT_ENOUGH_EVIDENCE。selection恒为null，decision_created和automatic_repair恒为false；不输出BEST或机器选中的策略。FEASIBLE只针对被测配方及已登记观察条件，不能推出该策略对任意场景可行。
+
+风险顺序：锁冲突→INFEASIBLE；其它Expected冲突、保护值变化或目标完全出画→HIGH_RISK；当前配方目标仍FAIL→INFEASIBLE；目标缺证据→NOT_ENOUGH_EVIDENCE；目标/相关观察含WARNING、部分未知或保护证据未独立比较→FEASIBLE_WITH_RISK；有证据且已登记条件均通过才FEASIBLE。已有缺陷与新增缺陷在Constraint Collision中分别标记preexisting。UNKNOWN不伪判FAIL；不以总分替代理由。
+
+Lens纯数学路径复用screen_projection.summarize_projection：固定透视Camera、零shift时，投影坐标围绕(0.5,0.5)按f_new/f_old缩放。只推断projected/clipped bounds，不能凭它推断遮挡。Native路径直接调用原actual_trace_exporter和plan_actual_checker.check，原compile_plan拒绝伪造Expected，故容差和来源完全相同。
+
+Constraint Collision有三类输入：候选与LOCKED执行selector相交；候选触及其他Expected或丢失原PASS；候选改变保护的世界/身份/可见性/Camera通道。LOCKED没有在Preview中释放。镜头候选逐值检查原生局部状态、Parent、previs属性和动画关键帧，仅遮去声明Camera通道/帧窗；当前三候选各比较431对象，摘要SHA完全一致。
+
+可见对象的Actual世界状态参与比较。不可见对象的求值矩阵可能有旧缓存，列为弱证据，不拿它判运动错误；其保护改用原生动画输入指纹。无射线/纯艺术意图继续NOT_REVIEWED，不补造Evidence。
+
+输出路径必须有PREVIEW_ONLY段且不能位于正式Skill或历史Repair目录；源文件在前后做SHA检查。输入只读，没有正式CSP/Blend写入接口。内存修改不是正式Repair成功，也不构成授权。
+
+目前原生配方仅实测R1的Lens/Dolly/Combined；六个策略均有耦合表，但不宣称六种都有通用自动lowering。Combined是Lens+Dolly两条耦合的组合，不新增第七类基础策略。对它们不做搜索、拟合迭代或排名。

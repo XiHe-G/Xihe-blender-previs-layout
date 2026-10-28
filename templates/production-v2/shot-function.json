@@ -1,0 +1,16 @@
+{
+  "contract": "shot-function",
+  "contract_version": "SYSTEM/2",
+  "shot_id": "SH01",
+  "purpose": "Establish relationship",
+  "viewer_priority": "ACTOR_A notices ACTOR_B",
+  "new_information": "Arrival",
+  "relation_change": "Observer becomes participant",
+  "cut_from_previous": "Attention shift",
+  "end_reason": "Decision made",
+  "dialogue_reference": "",
+  "reaction_hold": "ag.json#/events/HOLD01",
+  "listener_shot": "SH02",
+  "decision_pause": "ag.json#/events/PAUSE01",
+  "silence_beat": "ag.json#/events/SILENCE01"
+}

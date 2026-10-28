@@ -1,0 +1,102 @@
+{
+  "contract": "delivery-manifest",
+  "contract_version": "SYSTEM/2",
+  "project": "SYNTHETIC",
+  "scene": "SC01",
+  "sequence": "SEQ01",
+  "shot_range": [
+    "SH01",
+    "SH02"
+  ],
+  "source_blend": "layout.blend",
+  "layout_version": "L001",
+  "lighting_version": "NONE",
+  "visibility_version": "V001",
+  "resolution": [
+    640,
+    360
+  ],
+  "frame_range": [
+    1,
+    48
+  ],
+  "camera_version": "C001",
+  "revision_ids": [
+    "R001"
+  ],
+  "source_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "requested_outputs": [
+    {
+      "view": "IDENTITY_COLOR_LAYOUT",
+      "style": "CLEAN"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "layout.mp4",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "binding": {
+        "project": "SYNTHETIC",
+        "scene": "SC01",
+        "sequence": "SEQ01",
+        "shot_range": [
+          "SH01",
+          "SH02"
+        ],
+        "source_blend": "layout.blend",
+        "layout_version": "L001",
+        "lighting_version": "NONE",
+        "visibility_version": "V001",
+        "resolution": [
+          640,
+          360
+        ],
+        "frame_range": [
+          1,
+          48
+        ],
+        "camera_version": "C001",
+        "revision_ids": [
+          "R001"
+        ]
+      },
+      "view": "IDENTITY_COLOR_LAYOUT",
+      "style": "CLEAN",
+      "kind": "VIDEO"
+    }
+  ],
+  "changes": [
+    {
+      "revision_id": "R001",
+      "description": "Changed ending position"
+    }
+  ],
+  "cameras": [
+    {
+      "shot_id": "SH01",
+      "camera_id": "CAM01",
+      "version": "C001"
+    },
+    {
+      "shot_id": "SH02",
+      "camera_id": "CAM02",
+      "version": "C001"
+    }
+  ],
+  "shot_ranges": [
+    {
+      "shot_id": "SH01",
+      "frames": [
+        1,
+        24
+      ]
+    },
+    {
+      "shot_id": "SH02",
+      "frames": [
+        25,
+        48
+      ]
+    }
+  ]
+}

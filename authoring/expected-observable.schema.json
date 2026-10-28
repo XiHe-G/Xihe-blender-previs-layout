@@ -1,0 +1,239 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "EXPECTED-OBSERVABLES/1.0"
+    },
+    "graph_id": {
+      "type": "string"
+    },
+    "graph_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "measurement_binding_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "observables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "observable_id": {
+            "type": "string"
+          },
+          "source_author_id": {
+            "type": "string"
+          },
+          "shot_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "time_window": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "type": {
+            "enum": [
+              "SHOT_SIZE",
+              "SCREEN_POSITION",
+              "SCREEN_DIRECTION",
+              "CONTACT",
+              "NEAR_MISS",
+              "PROJECTILE_CONTINUITY",
+              "ACTION_PHASE",
+              "CAMERA_STATE",
+              "RECOVERY"
+            ]
+          },
+          "subjects": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "expected_range": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "maxItems": 4
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "expected_state": {
+            "anyOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tolerance": {
+            "type": "number",
+            "minimum": 0
+          },
+          "severity": {
+            "enum": [
+              "CRITICAL",
+              "MAJOR",
+              "MINOR",
+              "INFO"
+            ]
+          },
+          "provenance": {
+            "type": "object"
+          },
+          "behavior_profile": {
+            "enum": [
+              "LOCKED_HOLD",
+              "COMPOSITION_HOLD",
+              "SOFT_HOLD",
+              "DECLARED_BEHAVIOR"
+            ]
+          },
+          "requirement_source": {
+            "enum": [
+              "USER_AUTHORED",
+              "DIRECTOR_AUTHORED",
+              "SOURCE_REFERENCE",
+              "HISTORICAL_LABEL",
+              "TECHNICAL_DEFAULT",
+              "INFERRED"
+            ]
+          },
+          "confidence": {
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW"
+            ]
+          },
+          "tolerance_profile": {
+            "type": "object",
+            "required": [
+              "id",
+              "source",
+              "rationale",
+              "limits"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "source": {
+                "enum": [
+                  "USER_AUTHORED",
+                  "DIRECTOR_AUTHORED",
+                  "SOURCE_REFERENCE",
+                  "HISTORICAL_LABEL",
+                  "TECHNICAL_DEFAULT",
+                  "INFERRED"
+                ]
+              },
+              "rationale": {
+                "type": "string",
+                "minLength": 1
+              },
+              "limits": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "observable_id",
+          "source_author_id",
+          "shot_id",
+          "time_window",
+          "type",
+          "subjects",
+          "expected_range",
+          "expected_state",
+          "tolerance",
+          "severity",
+          "provenance"
+        ],
+        "additionalProperties": false,
+        "dependentRequired": {
+          "requirement_source": [
+            "confidence",
+            "behavior_profile",
+            "tolerance_profile"
+          ],
+          "confidence": [
+            "requirement_source",
+            "behavior_profile",
+            "tolerance_profile"
+          ],
+          "behavior_profile": [
+            "requirement_source",
+            "confidence",
+            "tolerance_profile"
+          ],
+          "tolerance_profile": [
+            "requirement_source",
+            "confidence",
+            "behavior_profile"
+          ]
+        }
+      }
+    },
+    "not_reviewed": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_author_id": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "plan": {}
+        },
+        "required": [
+          "source_author_id",
+          "reason",
+          "plan"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "graph_id",
+    "graph_sha256",
+    "measurement_binding_sha256",
+    "observables",
+    "not_reviewed"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

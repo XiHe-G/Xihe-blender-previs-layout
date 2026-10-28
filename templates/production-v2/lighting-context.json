@@ -1,0 +1,45 @@
+{
+  "contract": "lighting-context",
+  "contract_version": "SYSTEM/2",
+  "scene_id": "SC01",
+  "lighting_intent": "Warm interior contrasted with cool doorway",
+  "key_direction": [
+    0.0,
+    1.0,
+    -1.0
+  ],
+  "ambient": "LOW_COOL",
+  "practical_lights": [
+    "LAMP_A"
+  ],
+  "color_relationship": "WARM_COOL",
+  "intensity_relationship": "KEY_OVER_AMBIENT",
+  "spatial_light_zones": [
+    {
+      "id": "ZONE_A",
+      "landmark_ids": [
+        "DOOR_A"
+      ]
+    }
+  ],
+  "character_light_expectation": [
+    {
+      "identity": "ACTOR_A",
+      "zone": "ZONE_A",
+      "expectation": "Side light changes when turning"
+    }
+  ],
+  "dynamic_lighting_events": [],
+  "plan_version": "LP001",
+  "authorization": {
+    "mode": "NONE",
+    "source_message": "",
+    "scope": ""
+  },
+  "protected_channels": [
+    "camera",
+    "blocking",
+    "motion"
+  ],
+  "validation_evidence": []
+}

@@ -1,0 +1,191 @@
+{
+  "project_id": "NARRATIVE_EXAMPLE",
+  "revision": "blocking-v01",
+  "source_status": "示例坐标；替换为实际场景与剧情",
+  "scene_revision": "记录实际场景版本或指纹",
+  "characters": [
+    {
+      "id": "HERO",
+      "name": "主角",
+      "color": "#D84C35"
+    },
+    {
+      "id": "PARTNER",
+      "name": "同伴",
+      "color": "#345EC9"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "N1",
+      "label": "共同进入",
+      "time_or_order": "故事顺序；时码待路线预算后确定",
+      "states": {
+        "HERO": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "intent": "共同进入",
+          "facing": "同伴或前进方向",
+          "visibility": "场景中存在；镜头可见性需检查",
+          "level": "山道"
+        },
+        "PARTNER": {
+          "position": [
+            0,
+            2,
+            0
+          ],
+          "intent": "共同进入",
+          "facing": "同伴或前进方向",
+          "visibility": "场景中存在；镜头可见性需检查",
+          "level": "山道"
+        }
+      }
+    },
+    {
+      "id": "N2",
+      "label": "停步交流",
+      "time_or_order": "故事顺序；时码待路线预算后确定",
+      "states": {
+        "HERO": {
+          "position": [
+            8,
+            0,
+            0
+          ],
+          "intent": "停步交流",
+          "facing": "同伴或前进方向",
+          "visibility": "场景中存在；镜头可见性需检查",
+          "level": "山道"
+        },
+        "PARTNER": {
+          "position": [
+            8,
+            2,
+            0
+          ],
+          "intent": "停步交流",
+          "facing": "同伴或前进方向",
+          "visibility": "场景中存在；镜头可见性需检查",
+          "level": "山道"
+        }
+      }
+    },
+    {
+      "id": "N3",
+      "label": "一起离开",
+      "time_or_order": "故事顺序；时码待路线预算后确定",
+      "states": {
+        "HERO": {
+          "position": [
+            16,
+            0,
+            1
+          ],
+          "intent": "一起离开",
+          "facing": "同伴或前进方向",
+          "visibility": "场景中存在；镜头可见性需检查",
+          "level": "山道"
+        },
+        "PARTNER": {
+          "position": [
+            16,
+            2,
+            1
+          ],
+          "intent": "一起离开",
+          "facing": "同伴或前进方向",
+          "visibility": "场景中存在；镜头可见性需检查",
+          "level": "山道"
+        }
+      }
+    }
+  ],
+  "transitions": [
+    {
+      "from": "N1",
+      "to": "N2",
+      "characters": {
+        "HERO": {
+          "mode": "MOVE",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              8,
+              0,
+              0
+            ]
+          ]
+        },
+        "PARTNER": {
+          "mode": "MOVE",
+          "points": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              8,
+              2,
+              0
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "from": "N2",
+      "to": "N3",
+      "characters": {
+        "HERO": {
+          "mode": "MOVE",
+          "points": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              16,
+              0,
+              1
+            ]
+          ]
+        },
+        "PARTNER": {
+          "mode": "MOVE",
+          "points": [
+            [
+              8,
+              2,
+              0
+            ],
+            [
+              16,
+              2,
+              1
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "landmarks": [
+    {
+      "name": "停步点",
+      "position": [
+        8,
+        -2,
+        0
+      ]
+    }
+  ]
+}

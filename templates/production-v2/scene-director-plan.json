@@ -1,0 +1,54 @@
+{
+  "contract": "scene-director-plan",
+  "contract_version": "SYSTEM/2",
+  "scene_objective": "Discovery changes the relationship",
+  "character_objectives": [
+    {
+      "identity": "ACTOR_A",
+      "objective": "Understand the arrival"
+    }
+  ],
+  "beat_map": [
+    {
+      "beat_id": "B01",
+      "event": "Arrival",
+      "objectives": "Observe",
+      "perception": "Door opens",
+      "change": "New information",
+      "initiative": "ACTOR_B",
+      "result": "ACTOR_A decides to approach",
+      "time_ref": "ag.json#/beats/B01"
+    }
+  ],
+  "blocking_plan": {
+    "reference": "story-blocking-plan.json",
+    "approval_ref": "PENDING"
+  },
+  "shot_function_map": [
+    "shot-function.json"
+  ],
+  "rhythm_map": [
+    {
+      "beat_id": "B01",
+      "rhythm": "HOLD_THEN_DECISION"
+    }
+  ],
+  "continuity_handoff": [
+    "scene-state.json"
+  ],
+  "narrative_actions": [
+    {
+      "identity": "ACTOR_A",
+      "objective": "Understand",
+      "trigger": "Arrival",
+      "perception": "Sees figure",
+      "reaction": "Turns",
+      "decision": "Approach",
+      "action": "Move",
+      "listener_feedback": "Waits",
+      "relation_change": "Distance closes",
+      "endpoint": "Ready to speak"
+    }
+  ],
+  "design_permission": false
+}

@@ -1,0 +1,123 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "MOTION-BOUNDARY/1.0"
+    },
+    "diagnostic_only": {
+      "const": true
+    },
+    "subject": {
+      "type": "string"
+    },
+    "patch_range": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "fps": {
+      "type": "number"
+    },
+    "profile": {
+      "type": "object"
+    },
+    "authorized_discontinuities": {
+      "type": "array",
+      "items": {
+        "$ref": "authorized-discontinuity.schema.json"
+      }
+    },
+    "automatic_repair": {
+      "const": false
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "WARNING",
+        "FAIL",
+        "NOT_REVIEWED"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "missing_frames": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "properties": {
+        "C0": {
+          "enum": [
+            "PASS",
+            "WARNING",
+            "FAIL",
+            "NOT_REVIEWED"
+          ]
+        },
+        "C1": {
+          "enum": [
+            "PASS",
+            "WARNING",
+            "FAIL",
+            "NOT_REVIEWED"
+          ]
+        },
+        "C2": {
+          "enum": [
+            "PASS",
+            "WARNING",
+            "FAIL",
+            "NOT_REVIEWED"
+          ]
+        }
+      },
+      "required": [
+        "C0",
+        "C1",
+        "C2"
+      ],
+      "additionalProperties": false
+    },
+    "c0": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "intervals": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "interpolation_evidence": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "limitations": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "diagnostic_only",
+    "subject",
+    "patch_range",
+    "fps",
+    "profile",
+    "authorized_discontinuities",
+    "automatic_repair",
+    "status",
+    "dimensions",
+    "intervals"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

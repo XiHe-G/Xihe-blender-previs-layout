@@ -1,0 +1,52 @@
+{
+  "FIRE": {
+    "emitter": "FIRE_A",
+    "height": 1.0,
+    "spread": 0.5,
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "growth": "RAMP",
+    "flicker_envelope": [
+      0.8,
+      1.0
+    ],
+    "residue": "EMBER",
+    "light_contribution": "SEPARATE_LIGHT_EVENT"
+  },
+  "SHIELD": {
+    "volume": "SPHERE",
+    "activation": "ag.json#/events/ON",
+    "hold": "ag.json#/events/HOLD",
+    "impact_point": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ripple": "RADIAL",
+    "break_recover": "RECOVER"
+  },
+  "EXPLOSION": {
+    "origin": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "expansion": "RADIAL",
+    "peak_radius": 2.0,
+    "force_direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "flash": "LIGHT_EVENT",
+    "debris_direction": [
+      0.0,
+      1.0,
+      1.0
+    ],
+    "residue": "SMOKE"
+  }
+}

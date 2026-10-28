@@ -1,0 +1,51 @@
+{
+  "contract": "camera-semantic",
+  "contract_version": "SYSTEM/2",
+  "shot_id": "SH01",
+  "recipe": "LATERAL_REVEAL_FROM_SHOULDER",
+  "start_framing": "Behind head and shoulder of ACTOR_A",
+  "end_framing": "Reveal ACTOR_B",
+  "position_path": [
+    [
+      0.0,
+      0.0,
+      1.6
+    ],
+    [
+      1.0,
+      0.0,
+      1.6
+    ]
+  ],
+  "height_behavior": "FIXED",
+  "rotation_behavior": "FIXED",
+  "target_behavior": "REVEAL_TARGET",
+  "target_id": "ACTOR_B",
+  "lens_behavior": "FIXED",
+  "screen_objective": "Reveal ACTOR_B to screen right",
+  "foreground_relation": "ACTOR_A shoulder",
+  "allowed_compensation": [],
+  "forbidden_transforms": [
+    "ORBIT",
+    "HEIGHT_CHANGE",
+    "WAIST_RISE"
+  ],
+  "allow_pan": false,
+  "start_anchor": "HEAD_SHOULDER",
+  "axis_cross_authorization": "",
+  "lock_mode": "COMPOSITION_LOCK",
+  "composition": {
+    "subject_occupancy": 0.35,
+    "headroom": 0.1,
+    "lead_room": 0.2,
+    "foreground_relation": "SHOULDER_LEFT",
+    "screen_left_right": "A_LEFT_B_RIGHT",
+    "depth_relation": "A_NEAR_B_FAR",
+    "background_landmark": "DOOR_A",
+    "camera_height": 1.6,
+    "lens": 50.0,
+    "perspective_compression": "NORMAL",
+    "ground_relation": "VISIBLE"
+  },
+  "composition_evidence": "NOT_REVIEWED"
+}

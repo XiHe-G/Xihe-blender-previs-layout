@@ -1,0 +1,29 @@
+{
+  "fps": 24,
+  "total_frames": 120,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "videos": [
+    {
+      "path": "clean.mp4",
+      "audio": "absent"
+    },
+    {
+      "path": "review.mp4",
+      "audio": "absent"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "approved-animated-copy.blend"
+    },
+    {
+      "path": "timeline.json"
+    }
+  ],
+  "provenance": "List render receipt/encoding manifest locations; this verifier does not independently establish the render chain",
+  "visual_review": "Record actual contact sheets, clips or full playback inspected",
+  "user_acceptance": "not yet recorded"
+}

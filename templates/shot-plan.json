@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "project_id": "PROJECT_ID",
+  "shot_id": "SH001",
+  "fps": 24,
+  "frames": 96,
+  "resolution": [1280, 720],
+  "characters": [],
+  "actions": [],
+  "camera": {"movement": "STATIC", "lens": 35, "start": {"location": [5, 5, 3], "target": [0, 0, 1]}}
+}

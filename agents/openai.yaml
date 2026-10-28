@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender Previs Layout"
+  short_description: "Story-led Blender previs with adaptable director review"
+  default_prompt: "Use $blender-previs-layout to turn my story or approved shots into readable Blender previs with purposeful staging and photography, continuous motion, adaptable review outputs, and revisions that preserve my approved choices."

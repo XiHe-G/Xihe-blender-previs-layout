@@ -1,0 +1,96 @@
+{
+  "project_id": "MY_PROJECT",
+  "fps": 24,
+  "shots": [
+    {
+      "edit_id": "EDIT_001",
+      "shot_id": "11-1",
+      "duration_s": 2,
+      "camera": "CAM_OPEN",
+      "purpose": "establish shared origin"
+    },
+    {
+      "edit_id": "EDIT_002",
+      "shot_id": "11-1b",
+      "duration_s": 1,
+      "camera": "CAM_INSERT",
+      "purpose": "observe"
+    },
+    {
+      "edit_id": "EDIT_003",
+      "shot_id": "11-3",
+      "duration_s": 2,
+      "camera": "CAM_REVEAL",
+      "purpose": "reveal after travel"
+    }
+  ],
+  "routes": {
+    "COMMON": {
+      "points": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "speed_units_s": 3
+    },
+    "A": {
+      "points": [
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0
+        ]
+      ],
+      "speed_units_s": 3
+    },
+    "B": {
+      "points": [
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          4,
+          0
+        ]
+      ],
+      "speed_units_s": 2
+    }
+  },
+  "movement_groups": [
+    {
+      "id": "GROUP_A",
+      "route_ids": [
+        "COMMON",
+        "A"
+      ],
+      "depart_s": 0,
+      "reveal_s": 4,
+      "settle_s": 0.5
+    },
+    {
+      "id": "GROUP_B",
+      "route_ids": [
+        "COMMON",
+        "B"
+      ],
+      "depart_s": 0,
+      "reveal_s": 4,
+      "settle_s": 0.5
+    }
+  ]
+}

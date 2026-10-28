@@ -1,0 +1,50 @@
+{
+  "contract": "vfx-previs",
+  "contract_version": "SYSTEM/2",
+  "effect_id": "FX01",
+  "type": "FIRE",
+  "time_ref": "csp.json#/events/FX01",
+  "origin": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "direction": [
+    0.0,
+    0.0,
+    1.0
+  ],
+  "size": 1.0,
+  "duration": 1.0,
+  "affected_ids": [
+    "ACTOR_A"
+  ],
+  "result": "Blocks route",
+  "semantic_effect": "HEAT_BARRIER",
+  "visible_geometry": {
+    "enabled": true,
+    "proxy": "LOW_POLY_VOLUME"
+  },
+  "light_contribution": {
+    "enabled": false,
+    "lighting_event_ref": "",
+    "validation": "NOT_REVIEWED"
+  },
+  "parameters": {
+    "emitter": "FIRE_A",
+    "height": 1.0,
+    "spread": 0.5,
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "growth": "RAMP",
+    "flicker_envelope": [
+      0.8,
+      1.0
+    ],
+    "residue": "EMBER",
+    "light_contribution": "SEPARATE_LIGHT_EVENT"
+  }
+}

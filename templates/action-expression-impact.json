@@ -1,0 +1,141 @@
+{
+  "operation": "IMPACT_RESPONSE",
+  "timebase": {
+    "fps": 30,
+    "frames": 121
+  },
+  "spec": {
+    "id": "D_RESPONSE",
+    "actor": "D",
+    "body_height": 1.8,
+    "meters_per_unit": 1,
+    "provenance": "Authored light / heavy consequence; not mass simulation",
+    "boundary_policy": "AUTHORED_SPEED_ENVELOPE",
+    "contact": {
+      "event_id": "CONTACT_C",
+      "frame": 33,
+      "source_actor": "C",
+      "target_actor": "D"
+    },
+    "start_position": [
+      0.23333333333333406,
+      2.1,
+      0
+    ],
+    "direction": [
+      1,
+      0,
+      0
+    ],
+    "response_kind": "SLIDE",
+    "response_speed_hps": 4.0,
+    "phase_frames": [
+      33,
+      36,
+      42,
+      66
+    ],
+    "facing": {
+      "mode": "FIXED",
+      "yaw_deg": 90
+    },
+    "pose_channels": {
+      "body_pitch": [
+        {
+          "frame": 33,
+          "value": 0
+        },
+        {
+          "frame": 36,
+          "value": -34
+        },
+        {
+          "frame": 46,
+          "value": -23
+        },
+        {
+          "frame": 56,
+          "value": 10
+        },
+        {
+          "frame": 66,
+          "value": 0
+        }
+      ],
+      "lower_pitch": [
+        {
+          "frame": 33,
+          "value": 0
+        },
+        {
+          "frame": 38,
+          "value": -13
+        },
+        {
+          "frame": 48,
+          "value": -4
+        },
+        {
+          "frame": 66,
+          "value": 0
+        }
+      ],
+      "head_pitch": [
+        {
+          "frame": 33,
+          "value": 0
+        },
+        {
+          "frame": 39,
+          "value": -12
+        },
+        {
+          "frame": 51,
+          "value": 8
+        },
+        {
+          "frame": 66,
+          "value": 0
+        }
+      ],
+      "compression": [
+        {
+          "frame": 33,
+          "value": 1
+        },
+        {
+          "frame": 38,
+          "value": 0.82
+        },
+        {
+          "frame": 52,
+          "value": 0.9
+        },
+        {
+          "frame": 66,
+          "value": 1
+        }
+      ]
+    }
+  },
+  "source_rows": [
+    {
+      "frame": 32,
+      "actor": "C",
+      "position": [
+        -0.9999999999999981,
+        2.1,
+        0.0
+      ]
+    },
+    {
+      "frame": 33,
+      "actor": "C",
+      "position": [
+        -0.666666666666666,
+        2.1,
+        0.0
+      ]
+    }
+  ]
+}

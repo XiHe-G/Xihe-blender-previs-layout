@@ -1,0 +1,14 @@
+{
+  "blend": "approved-animated-copy.blend",
+  "scene": "Scene",
+  "timeline": "timeline.json",
+  "output_dir": "renders",
+  "mode": "review",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "review_scale": 0.5,
+  "resume": true,
+  "dependencies": []
+}

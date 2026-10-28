@@ -1,0 +1,13 @@
+# Momentum transfer — director-level kinematic consequence (LIMITED)
+
+Use explicit contact/control cause and incoming evaluated velocity to generate a motion consequence through `momentum_transfer.compile_consequence`. Reuse S51 RECOVERY_PROFILE for source deceleration, recipient velocity ramp and recovery. This is not rigid body, mass, friction, force, momentum conservation or anatomical balance simulation.
+
+Inputs: dense ordinary CSP world-space unparented root/prop tracks; source, recipient, actor/root/prop identities; existing matching CONTACT and (for controlled modes) ACQUIRE event; declared response/recovery windows, response_gain, reason, provenance and technical limits. Gain is a director-authored response strength, never a mass ratio. No event name guesses a consequence. An already stationary source is rejected. Active locks reject compilation.
+
+Modes: COUPLED_STOP (matching incoming velocities, shared displacement); DRAG_RESPONSE (controlled moving object induces recipient velocity ramp then recovery); IMPACT_RESPONSE (brief contact without acquiring control); OBSERVE_CONTROLLED_STOP (audit existing samples without rewriting them). Source motion is read at the entry boundary. State phases in `motion_consequence` denote the causal sequence; actual physical acceleration/speed are measured separately. Existing CSP action_beats carries the full contract. No parallel execution timeline.
+
+Prop Control remains independent: no invented ACQUIRE; anchors/handles/members remain ordinary CSP samples. A moving hand proxy can accommodate a bounded actor/prop offset without IK, and must still satisfy S003 reach/control plus S004 support. Do not claim this is anatomical hand binding.
+
+Validation needs real reopened world positions, geometric contact evidence, native controller state where required and verified body support. Planned-only/missing evidence is NOT_REVIEWED. Detect INSTANT_STOP_AFTER_CONTACT, UNEXPLAINED_SPEED_CHANGE, CONTACT_WITHOUT_RESPONSE, RESPONSE_WITHOUT_SOURCE and RECOVERY_MISSING. Standard meter-scale 30fps example limits: moving speed .03m/s, rest .01m/s, acceleration 6m/s², minimum response 8frames/.01m, entry match .02m/s; explicitly TECHNICAL_DEFAULT, not a universal physics limit. S51/S4.5 C0/C1 thresholds unchanged.
+
+Benchmark slices do not approve whole stories. If the incoming source has already stopped, report the precondition failure before authoring any explicit final-approach revision. Never pretend a zero-speed object transferred momentum. Full director/art quality stays PENDING_DIRECTOR_REVIEW. Parented objects, general contacts/collisions, force balance, falling/landing and unlimited vector changes are outside scope.

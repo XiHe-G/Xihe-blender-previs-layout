@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "project_id": "PROJECT_ID",
+  "layout_mode": "NARRATIVE",
+  "proxy_style": "AUTO",
+  "fps": 24,
+  "resolution": [1280, 720],
+  "scene": {
+    "id": "SCENE_ID",
+    "world_color": [0.23, 0.29, 0.36],
+    "world_strength": 0.45,
+    "elements": [
+      {"id": "GROUND", "type": "CUBE", "location": [0, 0, -0.1], "dimensions": [30, 30, 0.2], "color": [0.30, 0.33, 0.34]},
+      {"id": "GRID", "type": "GRID", "location": [0, 0, 0.006], "dimensions": [24, 24], "spacing": 2, "color": [0.21, 0.24, 0.25]},
+      {"id": "MAIN_GATE", "type": "GATE", "location": [0, -12, 0], "dimensions": [8, 1.2, 4], "opening_width": 3.4, "color": [0.43, 0.44, 0.42]},
+      {"id": "BACK_WALL", "type": "CUBE", "location": [0, -13, 1.1], "dimensions": [22, 0.5, 2.2], "color": [0.39, 0.41, 0.40]}
+    ]
+  },
+  "characters": [
+    {"id": "CHAR_A", "display_name": "角色A", "height": 1.7, "proxy_type": "HUMAN", "color": [0.12, 0.42, 0.92], "position": [0, 0, 0], "facing": {"target": "CHAR_B"}, "pose": "STAND", "state": "ALIVE"},
+    {"id": "CHAR_B", "display_name": "角色B", "height": 1.2, "proxy_type": "BIPED_CREATURE", "color": [0.92, 0.25, 0.12], "position": [2, -3, 0], "facing": {"target": "CHAR_A"}, "pose": "CROUCH", "state": "ALIVE"}
+  ],
+  "shots": [
+    {
+      "id": "SH001",
+      "frames": 96,
+      "actions": [
+        {"id": "SH001-A01", "character": "CHAR_A", "primitive": "LOOK_AT_TARGET", "target": "CHAR_B", "start": 1, "end": 24},
+        {"id": "SH001-A02", "character": "CHAR_A", "primitive": "WALK", "to": [1, -2, 0], "start": 25, "end": 72, "label": "approach"},
+        {"id": "SH001-A03", "character": "CHAR_A", "primitive": "HOLD", "start": 73, "end": 96}
+      ],
+      "camera": {"movement": "FOLLOW", "subject": "CHAR_A", "lens": 35, "start": {"location": [5, 5, 3], "target": [0, -1, 0.9]}, "end": {"location": [5.4, 5.4, 3.2], "target": [1, -2, 0.9]}}
+    }
+  ]
+}

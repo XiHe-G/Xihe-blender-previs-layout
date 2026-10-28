@@ -1,0 +1,165 @@
+{
+  "operation": "TRAVEL",
+  "timebase": {
+    "fps": 30,
+    "frames": 121
+  },
+  "spec": {
+    "id": "A_MOVE",
+    "actor": "A",
+    "body_height": 1.8,
+    "meters_per_unit": 1,
+    "provenance": "Authored comparison only; not universal genre speed",
+    "boundary_policy": "AUTHORED_SPEED_ENVELOPE",
+    "points": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        18,
+        0,
+        0
+      ]
+    ],
+    "speed_knots": [
+      {
+        "frame": 11,
+        "weight": 0,
+        "phase": "PREPARE"
+      },
+      {
+        "frame": 19,
+        "weight": 0,
+        "phase": "PREPARE"
+      },
+      {
+        "frame": 25,
+        "weight": 1,
+        "phase": "BURST"
+      },
+      {
+        "frame": 43,
+        "weight": 1,
+        "phase": "CRUISE"
+      },
+      {
+        "frame": 49,
+        "weight": 0,
+        "phase": "DECELERATE"
+      },
+      {
+        "frame": 67,
+        "weight": 0,
+        "phase": "RECOVER"
+      }
+    ],
+    "pose_channels": {
+      "body_pitch": [
+        {
+          "frame": 11,
+          "value": 0
+        },
+        {
+          "frame": 19,
+          "value": 12
+        },
+        {
+          "frame": 25,
+          "value": 36
+        },
+        {
+          "frame": 43,
+          "value": 36
+        },
+        {
+          "frame": 49,
+          "value": -12
+        },
+        {
+          "frame": 67,
+          "value": 0
+        }
+      ],
+      "lower_pitch": [
+        {
+          "frame": 11,
+          "value": 0
+        },
+        {
+          "frame": 19,
+          "value": 5
+        },
+        {
+          "frame": 25,
+          "value": 10
+        },
+        {
+          "frame": 43,
+          "value": 10
+        },
+        {
+          "frame": 49,
+          "value": -8
+        },
+        {
+          "frame": 67,
+          "value": 0
+        }
+      ],
+      "head_pitch": [
+        {
+          "frame": 11,
+          "value": 0
+        },
+        {
+          "frame": 19,
+          "value": 0
+        },
+        {
+          "frame": 25,
+          "value": -8
+        },
+        {
+          "frame": 43,
+          "value": -8
+        },
+        {
+          "frame": 49,
+          "value": 8
+        },
+        {
+          "frame": 67,
+          "value": 0
+        }
+      ],
+      "compression": [
+        {
+          "frame": 11,
+          "value": 1
+        },
+        {
+          "frame": 19,
+          "value": 0.84
+        },
+        {
+          "frame": 25,
+          "value": 0.96
+        },
+        {
+          "frame": 43,
+          "value": 0.96
+        },
+        {
+          "frame": 49,
+          "value": 0.86
+        },
+        {
+          "frame": 67,
+          "value": 1
+        }
+      ]
+    }
+  }
+}

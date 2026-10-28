@@ -1,0 +1,149 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "REPAIR-FEASIBILITY/1.0"
+    },
+    "preview_only": {
+      "const": true
+    },
+    "proposal_id": {
+      "type": "string"
+    },
+    "proposal_sha256": {
+      "type": "string"
+    },
+    "strategy_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "FEASIBLE",
+        "FEASIBLE_WITH_RISK",
+        "HIGH_RISK",
+        "INFEASIBLE",
+        "NOT_ENOUGH_EVIDENCE"
+      ]
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "impact_graph": {
+      "$ref": "repair-impact-graph.schema.json"
+    },
+    "constraint_collisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "CONSTRAINT_COLLISION"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "override_id": {
+            "type": "string"
+          },
+          "observable_id": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "preexisting": {
+            "type": "boolean"
+          },
+          "frames": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "subject": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "kind",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "target_result": {
+      "type": "object"
+    },
+    "predicted_screen": {
+      "type": "object"
+    },
+    "unknown_observables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "protected_content_result": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "NOT_REVIEWED"
+      ]
+    },
+    "checker_report_sha256": {
+      "type": "string"
+    },
+    "expected_sha256": {
+      "type": "string"
+    },
+    "production_csp_sha256": {
+      "type": "string"
+    },
+    "selection": {
+      "const": null
+    },
+    "decision_created": {
+      "const": false
+    },
+    "automatic_repair": {
+      "const": false
+    },
+    "coverage_limit": {
+      "type": "string"
+    },
+    "camera_math_crosscheck": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "preview_only",
+    "proposal_id",
+    "proposal_sha256",
+    "strategy_id",
+    "status",
+    "reasons",
+    "impact_graph",
+    "constraint_collisions",
+    "target_result",
+    "predicted_screen",
+    "unknown_observables",
+    "protected_content_result",
+    "checker_report_sha256",
+    "expected_sha256",
+    "production_csp_sha256",
+    "selection",
+    "decision_created",
+    "automatic_repair",
+    "coverage_limit"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,7 @@
+{
+  "version": "1.0",
+  "overrides": [
+    {"shot": "SH001", "target": "character:CHAR_A", "changes": {"position": [0.5, 0, 0]}},
+    {"shot": "SH001", "target": "camera", "changes": {"lens": 40, "end": {"target": [1.0, -2.0, 1.1]}}}
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "ACTUAL-TRACE/1.0"
+    },
+    "graph_id": {
+      "type": "string"
+    },
+    "measurement_binding_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_blend": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "timebase": {
+      "type": "object"
+    },
+    "sampling": {
+      "type": "object"
+    },
+    "methods": {
+      "type": "object"
+    },
+    "frames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "shot_id": {
+            "type": "string"
+          },
+          "frame": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "time": {
+            "type": "number"
+          },
+          "entities": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "entity_id": {
+                  "type": "string"
+                },
+                "exists": {
+                  "type": "boolean"
+                },
+                "object_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "identity_token": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "entity_world_state": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "position": {
+                          "type": "array",
+                          "items": {
+                            "type": "number"
+                          },
+                          "minItems": 3,
+                          "maxItems": 3
+                        },
+                        "quaternion": {
+                          "type": "array",
+                          "items": {
+                            "type": "number"
+                          },
+                          "minItems": 4,
+                          "maxItems": 4
+                        },
+                        "scale": {
+                          "type": "array",
+                          "items": {
+                            "type": "number"
+                          },
+                          "minItems": 3,
+                          "maxItems": 3
+                        },
+                        "tilt_deg": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "position",
+                        "quaternion",
+                        "scale",
+                        "tilt_deg"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "screen_bounds": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "projected_bounds": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "number"
+                              },
+                              "minItems": 4,
+                              "maxItems": 4
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "clipped_bounds": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "number"
+                              },
+                              "minItems": 4,
+                              "maxItems": 4
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "screen_center": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "number"
+                              },
+                              "minItems": 2,
+                              "maxItems": 2
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "screen_height_ratio": {
+                          "type": "number"
+                        },
+                        "screen_width_ratio": {
+                          "type": "number"
+                        },
+                        "visible_fraction_estimate": {
+                          "type": "number"
+                        },
+                        "projection_state": {
+                          "type": "string"
+                        },
+                        "method": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "projected_bounds",
+                        "clipped_bounds",
+                        "screen_center",
+                        "screen_height_ratio",
+                        "screen_width_ratio",
+                        "visible_fraction_estimate",
+                        "projection_state",
+                        "method"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "screen_center": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "screen_height_ratio": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "screen_width_ratio": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "visibility": {
+                  "enum": [
+                    "VISIBLE",
+                    "PARTIAL",
+                    "MOSTLY_OCCLUDED",
+                    "HIDDEN"
+                  ]
+                },
+                "occlusion_ratio": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "motion_vector_world": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "motion_vector_screen": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "speed_world": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "speed_screen": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "proxy_state": {
+                  "anyOf": [
+                    {
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "ownership_state": {
+                  "anyOf": [
+                    {
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "identity_evidence": {
+                  "enum": [
+                    "NATIVE_OBJECT_PROPERTY",
+                    "REGISTERED_BINDING",
+                    "INFERRED",
+                    "UNKNOWN"
+                  ]
+                },
+                "ownership_evidence": {
+                  "enum": [
+                    "NATIVE_OBJECT_PROPERTY",
+                    "REGISTERED_BINDING",
+                    "INFERRED",
+                    "UNKNOWN"
+                  ]
+                },
+                "registered_entity_id": {
+                  "type": "string"
+                },
+                "identity_strength": {
+                  "enum": [
+                    "STRONG_REGISTRATION_EVIDENCE",
+                    "WEAK_EVIDENCE"
+                  ]
+                }
+              },
+              "required": [
+                "entity_id",
+                "exists",
+                "object_ids",
+                "identity_token",
+                "entity_world_state",
+                "screen_bounds",
+                "screen_center",
+                "screen_height_ratio",
+                "screen_width_ratio",
+                "visibility",
+                "occlusion_ratio",
+                "motion_vector_world",
+                "motion_vector_screen",
+                "speed_world",
+                "speed_screen",
+                "proxy_state",
+                "ownership_state"
+              ],
+              "additionalProperties": true
+            }
+          },
+          "pairwise_distance": {
+            "type": "object"
+          },
+          "camera_transform": {
+            "type": "object",
+            "properties": {
+              "object": {
+                "type": "string"
+              },
+              "position": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "quaternion": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 4,
+                "maxItems": 4
+              }
+            },
+            "required": [
+              "object",
+              "position",
+              "quaternion"
+            ],
+            "additionalProperties": false
+          },
+          "camera_lens": {
+            "type": "number"
+          },
+          "camera_motion": {
+            "anyOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "event_state": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": [
+          "shot_id",
+          "frame",
+          "time",
+          "entities",
+          "pairwise_distance",
+          "camera_transform",
+          "camera_lens",
+          "camera_motion",
+          "event_state"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "graph_id",
+    "measurement_binding_sha256",
+    "source_blend",
+    "timebase",
+    "sampling",
+    "methods",
+    "frames"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

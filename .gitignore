@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+out/
+*.blend
+*.blend1
+*.mp4
+*.pdf
+*.log
+*.zip
+*.gz

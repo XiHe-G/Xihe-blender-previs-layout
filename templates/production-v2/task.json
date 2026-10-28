@@ -1,0 +1,22 @@
+{
+  "contract": "task",
+  "contract_version": "SYSTEM/2",
+  "requested_routes": [
+    "REVISE_EXISTING_LAYOUT"
+  ],
+  "primary_owner": "REVISE_EXISTING_LAYOUT",
+  "storyboard_confirmed": true,
+  "design_permission": false,
+  "lighting_required": false,
+  "lighting_authorization": {
+    "mode": "NONE",
+    "source_message": "",
+    "scope": ""
+  },
+  "requested_outputs": [
+    {
+      "view": "IDENTITY_COLOR_LAYOUT",
+      "style": "CLEAN"
+    }
+  ]
+}

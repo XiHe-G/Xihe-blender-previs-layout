@@ -1,0 +1,95 @@
+{
+  "contract": "ai-video-handoff",
+  "contract_version": "SYSTEM/2",
+  "delivery_manifest_ref": "delivery-manifest.json",
+  "layout_version": "L001",
+  "cut_points": [
+    25
+  ],
+  "identity_mapping": [
+    {
+      "identity": "ACTOR_A",
+      "proxy_id": "PROXY_A",
+      "character_reference": "character-sheet.png"
+    }
+  ],
+  "shots": [
+    {
+      "shot_id": "SH01",
+      "world_positions": [
+        {
+          "identity": "ACTOR_A",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_direction": "LEFT_TO_RIGHT",
+      "shot_size": "MEDIUM",
+      "camera_path": "csp.json#/camera/CAM01",
+      "lens": 50.0,
+      "start_state": "scene-state.json#/boundaries/0",
+      "end_state": "scene-state.json#/boundaries/0",
+      "motion_trend": "APPROACH",
+      "speed_class": "WALK",
+      "prop_relations": [
+        "PROP_A held by ACTOR_A"
+      ],
+      "combat_result": "NONE",
+      "vfx_semantics": [],
+      "lighting_changes": []
+    },
+    {
+      "shot_id": "SH02",
+      "world_positions": [
+        {
+          "identity": "ACTOR_A",
+          "position": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        }
+      ],
+      "screen_direction": "LEFT_TO_RIGHT",
+      "shot_size": "MEDIUM",
+      "camera_path": "csp.json#/camera/CAM02",
+      "lens": 50.0,
+      "start_state": "scene-state.json#/boundaries/1",
+      "end_state": "scene-state.json#/boundaries/1",
+      "motion_trend": "STOP",
+      "speed_class": "SLOW",
+      "prop_relations": [
+        "PROP_A held by ACTOR_A"
+      ],
+      "combat_result": "NONE",
+      "vfx_semantics": [],
+      "lighting_changes": []
+    }
+  ],
+  "reference_authority": [
+    {
+      "field": "camera",
+      "source": "confirmed-storyboard"
+    }
+  ],
+  "downstream_freedoms": [
+    "LIMB_DETAIL",
+    "EXPRESSION",
+    "CLOTH",
+    "HAIR",
+    "ACTION_DETAIL",
+    "FINAL_VFX",
+    "FINAL_MATERIAL"
+  ],
+  "protected_fields": [
+    "CAMERA",
+    "BLOCKING",
+    "SCREEN_DIRECTION",
+    "CUT",
+    "BEAT_RESULT"
+  ],
+  "authorized_overrides": []
+}

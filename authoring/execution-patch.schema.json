@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "patch_version": {
+      "const": "EXECUTION-PATCH/1.0"
+    },
+    "patch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "base_csp_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "author_graph_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "changeset_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "affected_scope_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "execution_binding_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "override_registry_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "modified_sections": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "execution_payload": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "section": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^/"
+          },
+          "old_value": {
+            "type": [
+              "number",
+              "string",
+              "boolean",
+              "null"
+            ]
+          },
+          "new_value": {
+            "type": [
+              "number",
+              "string",
+              "boolean",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "section",
+          "path",
+          "old_value",
+          "new_value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "region_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "region_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "UPDATED",
+              "REVALIDATED_UNCHANGED"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "region_id",
+          "status",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "provenance": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "patch_version",
+    "patch_id",
+    "base_csp_sha256",
+    "author_graph_sha256",
+    "changeset_sha256",
+    "affected_scope_sha256",
+    "execution_binding_sha256",
+    "override_registry_sha256",
+    "modified_sections",
+    "execution_payload",
+    "region_decisions",
+    "provenance"
+  ],
+  "additionalProperties": false
+}

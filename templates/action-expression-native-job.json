@@ -1,0 +1,32 @@
+{
+  "first_frame": 1,
+  "last_frame": 121,
+  "meters_per_unit": 1,
+  "actors": [
+    {
+      "id": "A",
+      "root": "CHAR_A",
+      "meshes": [
+        "A__LOWER",
+        "A__UPPER",
+        "A__HEAD",
+        "A__NOSE"
+      ],
+      "body_height": 1.8
+    }
+  ],
+  "landmarks": [
+    "LANDMARK_-8",
+    "LANDMARK_-4",
+    "LANDMARK_0",
+    "LANDMARK_4",
+    "LANDMARK_8",
+    "LANDMARK_12",
+    "LANDMARK_16",
+    "LANDMARK_20",
+    "LANDMARK_24",
+    "LANDMARK_28",
+    "LANDMARK_32"
+  ],
+  "contacts": []
+}

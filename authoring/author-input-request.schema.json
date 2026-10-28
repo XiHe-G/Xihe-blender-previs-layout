@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AUTHOR-INPUT-REQUEST/1.0",
+  "type": "object",
+  "required": [
+    "request_version",
+    "plan_id",
+    "graph_id",
+    "event_id",
+    "status",
+    "missing",
+    "known",
+    "valid_unresolved_choices",
+    "question",
+    "automatic_dialogue",
+    "automatic_execution",
+    "provenance"
+  ],
+  "properties": {
+    "request_version": {
+      "const": "AUTHOR-INPUT-REQUEST/1.0"
+    },
+    "status": {
+      "enum": [
+        "NEEDS_AUTHOR_INPUT",
+        "AMBIGUOUS",
+        "UNSUPPORTED",
+        "BLOCKED_BY_CONSTRAINT",
+        "BLOCKED_BY_OVERRIDE", "BLOCKED_BY_UPSTREAM"
+      ]
+    },
+    "automatic_dialogue": {
+      "const": false
+    },
+    "automatic_execution": {
+      "const": false
+    },
+    "missing": {
+      "type": "array"
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

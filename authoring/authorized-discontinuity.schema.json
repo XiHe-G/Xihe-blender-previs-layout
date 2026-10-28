@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "graph_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "frame_range": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "derivatives": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "C0",
+          "C1",
+          "C2"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "requirement_source": {
+      "enum": [
+        "USER_AUTHORED",
+        "DIRECTOR_AUTHORED"
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "event_id",
+    "graph_sha256",
+    "subject",
+    "frame_range",
+    "derivatives",
+    "requirement_source",
+    "reason"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,20 @@
+{
+  "contract": "plan-vs-actual",
+  "contract_version": "SYSTEM/2",
+  "shot_plan_ref": "shot-plan.json",
+  "blender_actual_ref": "native-evaluation.json",
+  "evidence_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "checks": [
+    "SHOT_COUNT",
+    "SHOT_ORDER",
+    "WORLD_POSITION",
+    "SCREEN_DIRECTION",
+    "TERMINAL_STATE",
+    "CAMERA_PATH",
+    "LENS",
+    "LIGHTING_CONTEXT",
+    "OUTPUT_VERSION"
+  ],
+  "status": "NOT_REVIEWED",
+  "downstream_actual": "NOT_IMPLEMENTED_RUNTIME"
+}

@@ -1,0 +1,799 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EXECUTION-PRIMITIVE/1.0 (single or explicit program envelope)",
+  "$defs": {
+    "primitive": {
+      "type": "object",
+      "required": [
+        "primitive_version",
+        "primitive_id",
+        "primitive_type",
+        "actor",
+        "subjects",
+        "start_time",
+        "end_time",
+        "entry_state",
+        "parameters",
+        "exit_requirements",
+        "continuity_contract",
+        "provenance"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "primitive_version": {
+          "const": "EXECUTION-PRIMITIVE/1.0"
+        },
+        "primitive_id": {
+          "type": "string",
+          "pattern": "^PRIM_[A-Z0-9_]+$"
+        },
+        "primitive_type": {
+          "enum": [
+            "MOVE_PROFILE",
+            "ORIENT_TO",
+            "APPROACH_TARGET",
+            "OFFSET_PATH",
+            "ATTACH_DETACH",
+            "RECOVERY_PROFILE",
+            "CAM_HOLD",
+            "CAM_REFRAME",
+            "CAM_FOLLOW",
+            "CAM_LEAD_LAG",
+            "CAM_PUSH_PULL",
+            "CAM_CATCH_UP"
+          ]
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subjects": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "start_time": {
+          "type": "number",
+          "minimum": 0
+        },
+        "end_time": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "entry_state": {
+          "type": "object",
+          "required": [
+            "position",
+            "velocity",
+            "movement_direction",
+            "orientation",
+            "angular_velocity",
+            "ownership_state"
+          ],
+          "properties": {
+            "position": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "velocity": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "movement_direction": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "orientation": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "angular_velocity": {
+              "type": "number"
+            },
+            "ownership_state": {
+              "type": "string"
+            },
+            "support_state": {
+              "type": "string"
+            },
+            "lens": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "camera_velocity": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "subject_screen_position": {
+              "type": [
+                "array",
+                "null"
+              ]
+            },
+            "subject_screen_size": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          }
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "path_type": {
+              "enum": [
+                "LINEAR",
+                "BEZIER_SIMPLE",
+                "POLYLINE"
+              ]
+            },
+            "timing_profile": {
+              "enum": [
+                "CONSTANT",
+                "EASE_IN",
+                "EASE_OUT",
+                "EASE_IN_OUT",
+                "ACCEL_CRUISE_DECEL",
+                "CUSTOM_NORMALIZED_CURVE"
+              ]
+            },
+            "start_position": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "end_position": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "entry_velocity": {
+              "oneOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "array",
+                  "minItems": 3,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              ]
+            },
+            "exit_velocity": {
+              "oneOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "array",
+                  "minItems": 3,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              ]
+            },
+            "start_velocity": {
+              "oneOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "array",
+                  "minItems": 3,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              ]
+            },
+            "end_velocity": {
+              "oneOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "array",
+                  "minItems": 3,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              ]
+            },
+            "peak_velocity": {
+              "type": "number",
+              "minimum": 0
+            },
+            "lead_delay": {
+              "type": "number",
+              "minimum": 0
+            },
+            "max_angular_speed": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "orientation_mode": {
+              "enum": [
+                "SNAP",
+                "SMOOTH",
+                "LEAD",
+                "LAG"
+              ]
+            },
+            "target_type": {
+              "enum": [
+                "WORLD_DIRECTION",
+                "WORLD_POINT",
+                "ENTITY"
+              ]
+            },
+            "desired_distance": {
+              "type": "number",
+              "minimum": 0
+            },
+            "arrival_time": {
+              "type": "number"
+            },
+            "approach_direction": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "offset_direction": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "offset_distance": {
+              "type": "number"
+            },
+            "peak_time": {
+              "type": "number"
+            },
+            "return_mode": {
+              "enum": [
+                "KEEP_OFFSET",
+                "RETURN_TO_BASE",
+                "TRANSITION_TO_NEW_PATH"
+              ]
+            },
+            "owner": {
+              "type": "string",
+              "minLength": 1
+            },
+            "detach_time": {
+              "type": "number"
+            },
+            "detach_velocity": {
+              "type": "number",
+              "minimum": 0
+            },
+            "detach_direction": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "inherit_owner_velocity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "release_ramp_duration": {
+              "type": "number",
+              "minimum": 0
+            },
+            "reattach_time": {
+              "type": "number"
+            },
+            "duration": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "displacement_limit": {
+              "type": "number",
+              "minimum": 0
+            },
+            "direction_retention": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "behavior_profile": {
+              "enum": [
+                "LOCKED_HOLD",
+                "COMPOSITION_HOLD",
+                "SOFT_HOLD"
+              ]
+            },
+            "max_rotation": {
+              "type": "number",
+              "minimum": 0
+            },
+            "max_translation": {
+              "type": "number",
+              "minimum": 0
+            },
+            "follow_strength": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "lag": {
+              "type": "number",
+              "minimum": 0
+            },
+            "lag_time": {
+              "type": "number",
+              "minimum": 0
+            },
+            "distance": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "lead_distance": {
+              "type": "number"
+            },
+            "screen_bias": {
+              "type": "number"
+            },
+            "transition_duration": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "distance_delta": {
+              "type": "number",
+              "minimum": 0
+            },
+            "lens_policy": {
+              "enum": [
+                "FIXED",
+                "EXPLICIT_ZOOM"
+              ]
+            },
+            "entry_lag": {
+              "type": "number",
+              "minimum": 0
+            },
+            "catchup_start": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "exclusiveMaximum": 1
+            },
+            "settle_start": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "exclusiveMaximum": 1
+            }
+          }
+        },
+        "exit_requirements": {
+          "type": "object"
+        },
+        "continuity_contract": {
+          "type": "object",
+          "required": [
+            "C0_REQUIRED",
+            "C1_REQUIREMENT",
+            "C2_POLICY"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "C0_REQUIRED": {
+              "const": true
+            },
+            "C1_REQUIREMENT": {
+              "enum": [
+                "REQUIRED",
+                "AUTHORIZED_DISCONTINUITY"
+              ]
+            },
+            "C2_POLICY": {
+              "enum": [
+                "RECORD",
+                "PREFERRED"
+              ]
+            }
+          }
+        },
+        "provenance": {
+          "type": "object",
+          "required": [
+            "source"
+          ],
+          "properties": {
+            "source": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "native_identity": {
+          "type": "object"
+        },
+        "contract_tolerance": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "primitive_type": {
+                "const": "MOVE_PROFILE"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "required": [
+                  "end_position"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "primitive_type": {
+                "const": "ORIENT_TO"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "required": [
+                  "target_type",
+                  "max_angular_speed"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "primitive_type": {
+                "const": "APPROACH_TARGET"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "required": [
+                  "desired_distance"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "primitive_type": {
+                "const": "OFFSET_PATH"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "required": [
+                  "offset_direction",
+                  "offset_distance",
+                  "peak_time",
+                  "return_mode"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "primitive_type": {
+                "const": "ATTACH_DETACH"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "required": [
+                  "owner",
+                  "detach_time",
+                  "detach_velocity",
+                  "detach_direction",
+                  "inherit_owner_velocity"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "primitive_type": {
+                "const": "RECOVERY_PROFILE"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "required": [
+                  "entry_velocity",
+                  "exit_velocity",
+                  "displacement_limit"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "primitive_type": {
+                "const": "CAM_HOLD"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "required": [
+                  "behavior_profile"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "primitive_type": {
+                "const": "CAM_REFRAME"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "required": [
+                  "target_screen_region",
+                  "max_rotation",
+                  "max_translation"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "primitive_type": {
+                "const": "CAM_FOLLOW"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "required": [
+                  "target",
+                  "follow_strength",
+                  "lag"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "primitive_type": {
+                "const": "CAM_LEAD_LAG"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "required": [
+                  "target",
+                  "lead_distance",
+                  "lag_time",
+                  "screen_bias",
+                  "transition_duration"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "primitive_type": {
+                "const": "CAM_PUSH_PULL"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "required": [
+                  "mode",
+                  "distance_delta"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "primitive_type": {
+                "const": "CAM_CATCH_UP"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "required": [
+                  "target",
+                  "entry_lag",
+                  "follow_strength",
+                  "catchup_start",
+                  "settle_start"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/primitive"
+    },
+    {
+      "type": "object",
+      "required": [
+        "program_version",
+        "timebase",
+        "primitives",
+        "composition"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "program_version": {
+          "const": "EXECUTION-PRIMITIVE/1.0"
+        },
+        "timebase": {
+          "type": "object",
+          "required": [
+            "time_unit",
+            "fps",
+            "duration",
+            "frame_origin"
+          ],
+          "properties": {
+            "time_unit": {
+              "const": "seconds"
+            },
+            "fps": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "duration": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "frame_origin": {
+              "const": 1
+            }
+          }
+        },
+        "primitives": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/primitive"
+          }
+        },
+        "composition": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "type",
+              "members"
+            ],
+            "properties": {
+              "type": {
+                "enum": [
+                  "SEQUENTIAL",
+                  "ORTHOGONAL_CHANNEL",
+                  "EXPLICIT_ADDITIVE_OFFSET"
+                ]
+              },
+              "members": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "read_tracks": {
+          "type": "object"
+        },
+        "entity_ids": {
+          "type": "object"
+        },
+        "seam_tolerance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.005
+        }
+      }
+    }
+  ]
+}

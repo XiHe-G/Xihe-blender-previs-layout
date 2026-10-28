@@ -1,0 +1,1361 @@
+{
+  "schema_version": "AG/1.0",
+  "graph_id": "CDR-004",
+  "origin": "MIGRATION",
+  "module": "COMBAT_DYNAMIC",
+  "entry_mode": "SOURCE",
+  "timebase": {
+    "time_unit": "seconds",
+    "fps": 30,
+    "duration": 15.2,
+    "frame_origin": 1
+  },
+  "execution": {
+    "path": "combat_reference_004_example.execution.json.gz",
+    "sha256": "7f8c363c774ecc30dbeaa483b71af31a52d534a6da9c25db7bada4e00d757423"
+  },
+  "entities": [
+    {
+      "id": "CHAR_A",
+      "type": "character",
+      "module": "COMBAT_DYNAMIC",
+      "owner": null,
+      "role": {
+        "value": "A",
+        "status": "SOURCE",
+        "source": "CSP actors.id; no dramatic role inferred"
+      },
+      "persistent_state": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      }
+    },
+    {
+      "id": "CHAR_B",
+      "type": "character",
+      "module": "COMBAT_DYNAMIC",
+      "owner": null,
+      "role": {
+        "value": "B",
+        "status": "SOURCE",
+        "source": "CSP actors.id; no dramatic role inferred"
+      },
+      "persistent_state": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      }
+    },
+    {
+      "id": "WPN_SWORD_01__PERSISTENT_BAR",
+      "type": "weapon",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_A",
+      "role": {
+        "value": "WEAPON_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROJ_WOOD_00__TABLE_TO_B",
+      "type": "projectile",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROJ_WOOD_01__TABLE_TO_B",
+      "type": "projectile",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROJ_WOOD_02__TABLE_TO_B",
+      "type": "projectile",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROJ_WOOD_03__TABLE_TO_B",
+      "type": "projectile",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROJ_WOOD_04__TABLE_TO_B",
+      "type": "projectile",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROJ_WOOD_05__TABLE_TO_B",
+      "type": "projectile",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROJ_WOOD_06__TABLE_TO_B",
+      "type": "projectile",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROJ_WOOD_07__TABLE_TO_B",
+      "type": "projectile",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROJ_WOOD_08__TABLE_TO_B",
+      "type": "projectile",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROJ_WOOD_09__TABLE_TO_B",
+      "type": "projectile",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROJ_WOOD_10__TABLE_TO_B",
+      "type": "projectile",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROJ_WOOD_11__TABLE_TO_B",
+      "type": "projectile",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_CONTACT_RAY_0",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_CONTACT_RAY_1",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_CONTACT_RAY_2",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_CONTACT_RAY_3",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_CONTACT_RAY_4",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_CONTACT_RAY_5",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_CONTACT_RAY_6",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_GUARD_PLATE__TEMPORARY_LOCAL_DEFENSE",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_B",
+      "role": {
+        "value": "ACTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    }
+  ],
+  "shot_intents": [
+    {
+      "shot_id": "SHOT_001",
+      "time_range": [
+        0.0,
+        0.1
+      ],
+      "primary_information": {
+        "value": "接续交锋残段",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_B"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Hold: Inherited contact insert",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_002",
+      "time_range": [
+        0.1,
+        2.2666666666666666
+      ],
+      "primary_information": {
+        "value": "腾空退开／飞剑入墙／落地",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_B",
+        "CHAR_A"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Catch-up: A changes depth while same sword travels toward wall",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_003",
+      "time_range": [
+        2.2666666666666666,
+        3.4
+      ],
+      "primary_information": {
+        "value": "空间对峙",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_A",
+        "CHAR_B"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Hold: A behind left table, B right foreground",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_004",
+      "time_range": [
+        3.4,
+        4.4
+      ],
+      "primary_information": {
+        "value": "B观察",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_A",
+        "CHAR_B"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Hold: B head toward A; torso largely cropped",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_005",
+      "time_range": [
+        4.4,
+        5.4
+      ],
+      "primary_information": {
+        "value": "A压身起木",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_A"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Pull-back: Table edge masks lower body; compression remains visible",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_006",
+      "time_range": [
+        5.4,
+        6.4
+      ],
+      "primary_information": {
+        "value": "木条悬起",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_A"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Lead: Strips separate from tabletop and rotate against shelves",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_007",
+      "time_range": [
+        6.4,
+        7.066666666666666
+      ],
+      "primary_information": {
+        "value": "A发射",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_A"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Pull-back: A torso release leads flying strips",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_008",
+      "time_range": [
+        7.066666666666666,
+        8.333333333333334
+      ],
+      "primary_information": {
+        "value": "木条飞行",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_A"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Catch-up: Shelf/window parallax behind same twelve strips",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_009",
+      "time_range": [
+        8.333333333333334,
+        8.866666666666667
+      ],
+      "primary_information": {
+        "value": "B迎袭",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_A",
+        "CHAR_B"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Catch-up: B faces arrival side",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_010",
+      "time_range": [
+        8.866666666666667,
+        9.9
+      ],
+      "primary_information": {
+        "value": "B后仰闪避",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_A",
+        "CHAR_B"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Lag: Strips cross head/torso near-pass corridor",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_011",
+      "time_range": [
+        9.9,
+        10.7
+      ],
+      "primary_information": {
+        "value": "B腾空翻转",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_A",
+        "CHAR_B"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Catch-up: B axial turn and landing visible between foreground strips",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_012",
+      "time_range": [
+        10.7,
+        11.533333333333333
+      ],
+      "primary_information": {
+        "value": "B格挡特写",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_A",
+        "CHAR_B"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Hold: Local guard meets final subset; short sparks at interception",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_013",
+      "time_range": [
+        11.533333333333333,
+        12.333333333333334
+      ],
+      "primary_information": {
+        "value": "B回身离画",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_B",
+        "CHAR_A"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Hold: B exits lower-left, environment remains",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_014",
+      "time_range": [
+        12.333333333333334,
+        13.133333333333333
+      ],
+      "primary_information": {
+        "value": "剑柄准备",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_B",
+        "CHAR_A"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Hold: Same wall sword grip insert; A body at edge",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_015",
+      "time_range": [
+        13.133333333333333,
+        15.2
+      ],
+      "primary_information": {
+        "value": "拔剑／上挑／回稳",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_A"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Pull-back: Sword tip remains legible during pull-back; A settles behind table",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EVT_OPEN_RECOIL",
+      "event_type": "RECOVERY",
+      "actor": [
+        "CHAR_B"
+      ],
+      "targets": [
+        "CHAR_A"
+      ],
+      "start": 0,
+      "peak": 0.35,
+      "end": 2.25,
+      "world_intent": {
+        "value": "Inherited clash -> A retreats airborne -> sword embeds -> A lands | Original target expression: A / sword / wall",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Inherited clash -> A retreats airborne -> sword embeds -> A lands",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    },
+    {
+      "event_id": "EVT_OBSERVE",
+      "event_type": "LOOK",
+      "actor": [
+        "CHAR_A",
+        "CHAR_B"
+      ],
+      "targets": [
+        "CHAR_A",
+        "CHAR_B"
+      ],
+      "start": 2.25,
+      "peak": 2.25,
+      "end": 4.4,
+      "world_intent": {
+        "value": "Breathing space and eye-line exchange | Original target expression: each other",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Breathing space and eye-line exchange",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    },
+    {
+      "event_id": "EVT_WOOD_LAUNCH",
+      "event_type": "RELEASE",
+      "actor": [
+        "CHAR_A"
+      ],
+      "targets": [
+        "CHAR_B"
+      ],
+      "start": 4.4,
+      "peak": 6.45,
+      "end": 7.2,
+      "world_intent": {
+        "value": "Compression -> lift -> orient -> release -> torso recoil | Original target expression: B",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Compression -> lift -> orient -> release -> torso recoil",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    },
+    {
+      "event_id": "EVT_WOOD_FLIGHT",
+      "event_type": "PROJECTILE_TRAVEL",
+      "actor": [
+        "CHAR_A"
+      ],
+      "targets": [
+        "CHAR_B"
+      ],
+      "start": 4.7,
+      "peak": 7.05,
+      "end": 11.533333,
+      "world_intent": {
+        "value": "Persistent strips rise, fly, pass B; final subset meets guard and deflects | Original target expression: B",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Persistent strips rise, fly, pass B; final subset meets guard and deflects",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    },
+    {
+      "event_id": "EVT_DODGE",
+      "event_type": "DODGE",
+      "actor": [
+        "CHAR_B"
+      ],
+      "targets": [
+        "PROJ_WOOD_00__TABLE_TO_B",
+        "PROJ_WOOD_01__TABLE_TO_B",
+        "PROJ_WOOD_02__TABLE_TO_B",
+        "PROJ_WOOD_03__TABLE_TO_B",
+        "PROJ_WOOD_04__TABLE_TO_B",
+        "PROJ_WOOD_05__TABLE_TO_B",
+        "PROJ_WOOD_06__TABLE_TO_B",
+        "PROJ_WOOD_07__TABLE_TO_B",
+        "PROJ_WOOD_08__TABLE_TO_B",
+        "PROJ_WOOD_09__TABLE_TO_B",
+        "PROJ_WOOD_10__TABLE_TO_B",
+        "PROJ_WOOD_11__TABLE_TO_B"
+      ],
+      "start": 8.35,
+      "peak": 10.16,
+      "end": 10.85,
+      "world_intent": {
+        "value": "Head turn, lean-back, low coil, airborne axial rotation, landing | Original target expression: wooden strips",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Head turn, lean-back, low coil, airborne axial rotation, landing",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    },
+    {
+      "event_id": "EVT_DEFLECT",
+      "event_type": "BLOCK",
+      "actor": [
+        "CHAR_B"
+      ],
+      "targets": [
+        "PROJ_WOOD_00__TABLE_TO_B",
+        "PROJ_WOOD_01__TABLE_TO_B",
+        "PROJ_WOOD_02__TABLE_TO_B",
+        "PROJ_WOOD_03__TABLE_TO_B",
+        "PROJ_WOOD_04__TABLE_TO_B",
+        "PROJ_WOOD_05__TABLE_TO_B",
+        "PROJ_WOOD_06__TABLE_TO_B",
+        "PROJ_WOOD_07__TABLE_TO_B",
+        "PROJ_WOOD_08__TABLE_TO_B",
+        "PROJ_WOOD_09__TABLE_TO_B",
+        "PROJ_WOOD_10__TABLE_TO_B",
+        "PROJ_WOOD_11__TABLE_TO_B"
+      ],
+      "start": 10.7,
+      "peak": 10.94,
+      "end": 12.35,
+      "world_intent": {
+        "value": "Guard intercept -> fragments change direction -> body follows and exits | Original target expression: wooden strips",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Guard intercept -> fragments change direction -> body follows and exits",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    },
+    {
+      "event_id": "EVT_SWORD_RETURN",
+      "event_type": "RECOVERY",
+      "actor": [
+        "CHAR_A"
+      ],
+      "targets": [
+        "WPN_SWORD_01__PERSISTENT_BAR"
+      ],
+      "start": 12.333333,
+      "peak": 14.15,
+      "end": 15.2,
+      "world_intent": {
+        "value": "Grasp preparation -> draw -> upward arc -> settle, no body contact | Original target expression: same wall sword",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Grasp preparation -> draw -> upward arc -> settle, no body contact",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    }
+  ],
+  "constraints": [
+    {
+      "constraint_id": "CST_SHOT_001",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_001"
+      ],
+      "requirement": "Inherited contact insert",
+      "provenance": {
+        "value": "Inherited contact insert",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_002",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_002"
+      ],
+      "requirement": "A changes depth while same sword travels toward wall",
+      "provenance": {
+        "value": "A changes depth while same sword travels toward wall",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_003",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_003"
+      ],
+      "requirement": "A behind left table, B right foreground",
+      "provenance": {
+        "value": "A behind left table, B right foreground",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_004",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_004"
+      ],
+      "requirement": "B head toward A; torso largely cropped",
+      "provenance": {
+        "value": "B head toward A; torso largely cropped",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_005",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_005"
+      ],
+      "requirement": "Table edge masks lower body; compression remains visible",
+      "provenance": {
+        "value": "Table edge masks lower body; compression remains visible",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_006",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_006"
+      ],
+      "requirement": "Strips separate from tabletop and rotate against shelves",
+      "provenance": {
+        "value": "Strips separate from tabletop and rotate against shelves",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_007",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_007"
+      ],
+      "requirement": "A torso release leads flying strips",
+      "provenance": {
+        "value": "A torso release leads flying strips",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_008",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_008"
+      ],
+      "requirement": "Shelf/window parallax behind same twelve strips",
+      "provenance": {
+        "value": "Shelf/window parallax behind same twelve strips",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_009",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_009"
+      ],
+      "requirement": "B faces arrival side",
+      "provenance": {
+        "value": "B faces arrival side",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_010",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_010"
+      ],
+      "requirement": "Strips cross head/torso near-pass corridor",
+      "provenance": {
+        "value": "Strips cross head/torso near-pass corridor",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_011",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_011"
+      ],
+      "requirement": "B axial turn and landing visible between foreground strips",
+      "provenance": {
+        "value": "B axial turn and landing visible between foreground strips",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_012",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_012"
+      ],
+      "requirement": "Local guard meets final subset; short sparks at interception",
+      "provenance": {
+        "value": "Local guard meets final subset; short sparks at interception",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_013",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_013"
+      ],
+      "requirement": "B exits lower-left, environment remains",
+      "provenance": {
+        "value": "B exits lower-left, environment remains",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_014",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_014"
+      ],
+      "requirement": "Same wall sword grip insert; A body at edge",
+      "provenance": {
+        "value": "Same wall sword grip insert; A body at edge",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_015",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_015"
+      ],
+      "requirement": "Sword tip remains legible during pull-back; A settles behind table",
+      "provenance": {
+        "value": "Sword tip remains legible during pull-back; A settles behind table",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "event_id": "EVT_OBSERVE",
+      "depends_on": "EVT_OPEN_RECOIL",
+      "condition": {
+        "value": "Incoming object tangent / contact normal determines receiver and proxy response; inspect evaluated world tracks at trigger; Retain approved response displacement, torso rotation, delayed recovery and proxy expansion; no independent retiming",
+        "status": "SOURCE",
+        "source": "Explicit CSP causal_links; not inferred from motion"
+      }
+    },
+    {
+      "event_id": "EVT_WOOD_LAUNCH",
+      "depends_on": "EVT_OBSERVE",
+      "condition": {
+        "value": "Incoming object tangent / contact normal determines receiver and proxy response; inspect evaluated world tracks at trigger; Retain approved response displacement, torso rotation, delayed recovery and proxy expansion; no independent retiming",
+        "status": "SOURCE",
+        "source": "Explicit CSP causal_links; not inferred from motion"
+      }
+    },
+    {
+      "event_id": "EVT_WOOD_FLIGHT",
+      "depends_on": "EVT_WOOD_LAUNCH",
+      "condition": {
+        "value": "Incoming object tangent / contact normal determines receiver and proxy response; inspect evaluated world tracks at trigger; Retain approved response displacement, torso rotation, delayed recovery and proxy expansion; no independent retiming",
+        "status": "SOURCE",
+        "source": "Explicit CSP causal_links; not inferred from motion"
+      }
+    },
+    {
+      "event_id": "EVT_DODGE",
+      "depends_on": "EVT_WOOD_FLIGHT",
+      "condition": {
+        "value": "Incoming object tangent / contact normal determines receiver and proxy response; inspect evaluated world tracks at trigger; Retain approved response displacement, torso rotation, delayed recovery and proxy expansion; no independent retiming",
+        "status": "SOURCE",
+        "source": "Explicit CSP causal_links; not inferred from motion"
+      }
+    },
+    {
+      "event_id": "EVT_DEFLECT",
+      "depends_on": "EVT_DODGE",
+      "condition": {
+        "value": "Incoming object tangent / contact normal determines receiver and proxy response; inspect evaluated world tracks at trigger; Retain approved response displacement, torso rotation, delayed recovery and proxy expansion; no independent retiming",
+        "status": "SOURCE",
+        "source": "Explicit CSP causal_links; not inferred from motion"
+      }
+    },
+    {
+      "event_id": "EVT_SWORD_RETURN",
+      "depends_on": "EVT_DEFLECT",
+      "condition": {
+        "value": "Incoming object tangent / contact normal determines receiver and proxy response; inspect evaluated world tracks at trigger; Retain approved response displacement, torso rotation, delayed recovery and proxy expansion; no independent retiming",
+        "status": "SOURCE",
+        "source": "Explicit CSP causal_links; not inferred from motion"
+      }
+    }
+  ],
+  "overrides": []
+}

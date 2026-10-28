@@ -1,0 +1,1758 @@
+{
+  "schema_version": "AG/1.0",
+  "graph_id": "CDR-003",
+  "origin": "MIGRATION",
+  "module": "COMBAT_DYNAMIC",
+  "entry_mode": "SOURCE",
+  "timebase": {
+    "time_unit": "seconds",
+    "fps": 30,
+    "duration": 14.533333333333333,
+    "frame_origin": 1
+  },
+  "execution": {
+    "path": "combat_reference_example.execution.json.gz",
+    "sha256": "97ba0c7d609c37b99bd824b91ba8f1a07d945419f414de1960e4ed9b27e19eac"
+  },
+  "entities": [
+    {
+      "id": "CHAR_YOUTH",
+      "type": "character",
+      "module": "COMBAT_DYNAMIC",
+      "owner": null,
+      "role": {
+        "value": "YOUTH",
+        "status": "SOURCE",
+        "source": "CSP actors.id; no dramatic role inferred"
+      },
+      "persistent_state": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      }
+    },
+    {
+      "id": "CHAR_APE_A",
+      "type": "character",
+      "module": "COMBAT_DYNAMIC",
+      "owner": null,
+      "role": {
+        "value": "APE_A",
+        "status": "SOURCE",
+        "source": "CSP actors.id; no dramatic role inferred"
+      },
+      "persistent_state": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      }
+    },
+    {
+      "id": "CHAR_APE_B",
+      "type": "character",
+      "module": "COMBAT_DYNAMIC",
+      "owner": null,
+      "role": {
+        "value": "APE_B",
+        "status": "SOURCE",
+        "source": "CSP actors.id; no dramatic role inferred"
+      },
+      "persistent_state": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      }
+    },
+    {
+      "id": "PROJ_PROJECTILE_01__ONE_CONTINUOUS_OBJECT",
+      "type": "projectile",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_PROJECTILE_ORBIT_0",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_PROJECTILE_ORBIT_1",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_PROJECTILE_ORBIT_2",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_PROJECTILE_TRAIL_0",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_PROJECTILE_TRAIL_1",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_PROJECTILE_TRAIL_2",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_PROJECTILE_TRAIL_3",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_A",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "INFERRED",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_IMPACT_RING_0",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_IMPACT_RING_1",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_IMPACT_RING_2",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_IMPACT_RING_3",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_IMPACT_RING_4",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_00",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_01",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_02",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_03",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_04",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_05",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_06",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_07",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_08",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_09",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_10",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_11",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_12",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_13",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_14",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_15",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_16",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_17",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_18",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_19",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_20",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_21",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_22",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_23",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_24",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_25",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_26",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_27",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_28",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_EXPANSION_29",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_00",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_01",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_02",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_03",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_04",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_05",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_06",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_07",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_08",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_09",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_10",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_11",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_12",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_13",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_14",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_15",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_16",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_SNOW_DEBRIS_17",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "VFX_MOTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "WPN_WEAPON_PROXY__APE_B_BAR",
+      "type": "weapon",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_APE_B",
+      "role": {
+        "value": "WEAPON_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "CONTINUES_BEYOND_CLIP",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_GUARD__LOCAL_DIRECTION_RING",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_YOUTH",
+      "role": {
+        "value": "ACTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_GUARD_WEDGE_0",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_YOUTH",
+      "role": {
+        "value": "ACTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_GUARD_WEDGE_1",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_YOUTH",
+      "role": {
+        "value": "ACTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    },
+    {
+      "id": "PROP_GUARD_WEDGE_2",
+      "type": "prop",
+      "module": "COMBAT_DYNAMIC",
+      "owner": "CHAR_YOUTH",
+      "role": {
+        "value": "ACTION_PROXY",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.role; projectile classification is INFERRED from identifier"
+      },
+      "persistent_state": {
+        "value": "HIDDEN_AFTER_SEMANTIC_WINDOW_OR_EXIT",
+        "status": "SOURCE",
+        "source": "CSP proxy_lifecycles.end_state"
+      }
+    }
+  ],
+  "shot_intents": [
+    {
+      "shot_id": "SHOT_001",
+      "time_range": [
+        0.0,
+        1.4666666666666666
+      ],
+      "primary_information": {
+        "value": "青年沿雪道向林内推进；发射者在高枝近前景",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_YOUTH"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Hold: Foreground perch masks part of left edge; youth stays distant",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_002",
+      "time_range": [
+        1.4666666666666666,
+        5.6
+      ],
+      "primary_information": {
+        "value": "身体后蓄/下压，2.8–3.0秒释放；同一球体前近景后穿林下降追袭",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_YOUTH",
+        "CHAR_APE_A"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Catch-up: Launcher gives way to foreground ball; branches create parallax",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_003",
+      "time_range": [
+        5.6,
+        6.733333333333333
+      ],
+      "primary_information": {
+        "value": "低角度青年闪避腾空，球在后上方逼近",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_YOUTH",
+        "CHAR_APE_A"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Lead: Ball crosses behind/above rising youth",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_004",
+      "time_range": [
+        6.733333333333333,
+        8.533333333333333
+      ],
+      "primary_information": {
+        "value": "近景球从额前掠过；青年侧偏并回望",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_APE_A",
+        "CHAR_YOUTH",
+        "CHAR_APE_B"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Hold: Ball briefly overlaps brow; head facing and exit remain readable",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_005",
+      "time_range": [
+        8.533333333333333,
+        10.133333333333333
+      ],
+      "primary_information": {
+        "value": "紫色追击者从左后起跳，兵器过顶；延续青年腾空",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_APE_A",
+        "CHAR_YOUTH",
+        "CHAR_APE_B"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Hold: Pursuer behind/left, youth front/right at different heights",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_006",
+      "time_range": [
+        10.133333333333333,
+        11.5
+      ],
+      "primary_information": {
+        "value": "局部金色楔片+圆环表示防御形成；主体仍扭转",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_YOUTH",
+        "CHAR_APE_B"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Hold: Local gold guard fills insert; no anatomical hand claim",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_007",
+      "time_range": [
+        11.5,
+        12.5
+      ],
+      "primary_information": {
+        "value": "青年落地压低，追击者下降挥击；兵器到防御点",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_YOUTH",
+        "CHAR_APE_B"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Catch-up: Weapon/guard contact readable before rings expand",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    },
+    {
+      "shot_id": "SHOT_008",
+      "time_range": [
+        12.5,
+        14.533333333333333
+      ],
+      "primary_information": {
+        "value": "远景冲击环、薄片与雪雾团块向外扩散",
+        "status": "SOURCE",
+        "source": "CSP shot_plan.summary"
+      },
+      "subjects": [
+        "CHAR_YOUTH",
+        "CHAR_APE_B"
+      ],
+      "shot_size_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "screen_direction_intent": {
+        "value": "Derived from successive center_uv in baseline-evaluated.json.gz; distinguish world movement from camera motion",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.screen_direction"
+      },
+      "camera_behavior_intent": {
+        "value": "Hold: Post-contact snow intentionally approaches camera; no new hidden strike",
+        "status": "SOURCE",
+        "source": "CSP camera_choreography states/framing_goal; classification only"
+      },
+      "required_visibility": [],
+      "handoff_to_next": null
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EVT_RUN",
+      "event_type": "MOVE",
+      "actor": [
+        "CHAR_YOUTH"
+      ],
+      "targets": [
+        "CHAR_APE_A"
+      ],
+      "start": 0,
+      "peak": 0.35,
+      "end": 5.8,
+      "world_intent": {
+        "value": "Forward approach transitions into low dodge | Original target expression: APE_A",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Forward approach transitions into low dodge",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    },
+    {
+      "event_id": "EVT_LAUNCH",
+      "event_type": "RELEASE",
+      "actor": [
+        "CHAR_APE_A"
+      ],
+      "targets": [
+        "CHAR_YOUTH"
+      ],
+      "start": 1.466667,
+      "peak": 2.9,
+      "end": 4.03,
+      "world_intent": {
+        "value": "Body coil -> ball release -> follow-through | Original target expression: YOUTH",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Body coil -> ball release -> follow-through",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    },
+    {
+      "event_id": "EVT_BALL",
+      "event_type": "PROJECTILE_TRAVEL",
+      "actor": [
+        "CHAR_APE_A"
+      ],
+      "targets": [
+        "CHAR_YOUTH"
+      ],
+      "start": 1.5,
+      "peak": 4.03,
+      "end": 9.2,
+      "world_intent": {
+        "value": "Charge then forest flight and near miss; no invented body hit | Original target expression: YOUTH",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Charge then forest flight and near miss; no invented body hit",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    },
+    {
+      "event_id": "EVT_AIR",
+      "event_type": "DODGE",
+      "actor": [
+        "CHAR_YOUTH"
+      ],
+      "targets": [
+        "PROJ_PROJECTILE_01__ONE_CONTINUOUS_OBJECT"
+      ],
+      "start": 5.4,
+      "peak": 5.95,
+      "end": 12.1,
+      "world_intent": {
+        "value": "Same takeoff survives head insert, pursuer and guard inserts, then landing absorption | Original target expression: BALL",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Same takeoff survives head insert, pursuer and guard inserts, then landing absorption",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    },
+    {
+      "event_id": "EVT_PURSUIT",
+      "event_type": "ATTACK",
+      "actor": [
+        "CHAR_APE_B"
+      ],
+      "targets": [
+        "CHAR_YOUTH"
+      ],
+      "start": 8.3,
+      "peak": 9.13,
+      "end": 12.4,
+      "world_intent": {
+        "value": "Heavy takeoff, overhead weapon approach and downward strike | Original target expression: YOUTH",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Heavy takeoff, overhead weapon approach and downward strike",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    },
+    {
+      "event_id": "EVT_GUARD",
+      "event_type": "BLOCK",
+      "actor": [
+        "CHAR_YOUTH"
+      ],
+      "targets": [
+        "CHAR_APE_B"
+      ],
+      "start": 10.133333,
+      "peak": 11.4,
+      "end": 12.9,
+      "world_intent": {
+        "value": "Gold proxy builds facing incoming weapon then contracts | Original target expression: APE_B",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Gold proxy builds facing incoming weapon then contracts",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    },
+    {
+      "event_id": "EVT_CLASH",
+      "event_type": "CONTACT",
+      "actor": [
+        "CHAR_APE_B"
+      ],
+      "targets": [
+        "CHAR_YOUTH"
+      ],
+      "start": 12.15,
+      "peak": 12.366667,
+      "end": 14.533333333333333,
+      "world_intent": {
+        "value": "Weapon to guard -> body recoil -> radial impact and snow expansion | Original target expression: YOUTH / ground",
+        "status": "SOURCE",
+        "source": "CSP action_beats outcome/target; event_type is curated from the explicit beat, not inferred choreography"
+      },
+      "screen_intent": {
+        "value": null,
+        "status": "UNKNOWN",
+        "source": "Not recoverable from execution data"
+      },
+      "result": {
+        "value": "Weapon to guard -> body recoil -> radial impact and snow expansion",
+        "status": "SOURCE",
+        "source": "CSP action_beats.outcome"
+      },
+      "source_event": null
+    }
+  ],
+  "constraints": [
+    {
+      "constraint_id": "CST_SHOT_001",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_001"
+      ],
+      "requirement": "Foreground perch masks part of left edge; youth stays distant",
+      "provenance": {
+        "value": "Foreground perch masks part of left edge; youth stays distant",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_002",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_002"
+      ],
+      "requirement": "Launcher gives way to foreground ball; branches create parallax",
+      "provenance": {
+        "value": "Launcher gives way to foreground ball; branches create parallax",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_003",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_003"
+      ],
+      "requirement": "Ball crosses behind/above rising youth",
+      "provenance": {
+        "value": "Ball crosses behind/above rising youth",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_004",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_004"
+      ],
+      "requirement": "Ball briefly overlaps brow; head facing and exit remain readable",
+      "provenance": {
+        "value": "Ball briefly overlaps brow; head facing and exit remain readable",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_005",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_005"
+      ],
+      "requirement": "Pursuer behind/left, youth front/right at different heights",
+      "provenance": {
+        "value": "Pursuer behind/left, youth front/right at different heights",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_006",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_006"
+      ],
+      "requirement": "Local gold guard fills insert; no anatomical hand claim",
+      "provenance": {
+        "value": "Local gold guard fills insert; no anatomical hand claim",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_007",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_007"
+      ],
+      "requirement": "Weapon/guard contact readable before rings expand",
+      "provenance": {
+        "value": "Weapon/guard contact readable before rings expand",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    },
+    {
+      "constraint_id": "CST_SHOT_008",
+      "scope": "SHOT",
+      "targets": [
+        "SHOT_008"
+      ],
+      "requirement": "Post-contact snow intentionally approaches camera; no new hidden strike",
+      "provenance": {
+        "value": "Post-contact snow intentionally approaches camera; no new hidden strike",
+        "status": "SOURCE",
+        "source": "CSP screen_targets.major_occlusion; design contract, not a geometric check"
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "event_id": "EVT_BALL",
+      "depends_on": "EVT_LAUNCH",
+      "condition": {
+        "value": "Incoming object tangent / contact normal determines receiver and proxy response; inspect evaluated world tracks at trigger; Retain approved response displacement, torso rotation, delayed recovery and proxy expansion; no independent retiming",
+        "status": "SOURCE",
+        "source": "Explicit CSP causal_links; not inferred from motion"
+      }
+    },
+    {
+      "event_id": "EVT_AIR",
+      "depends_on": "EVT_BALL",
+      "condition": {
+        "value": "Incoming object tangent / contact normal determines receiver and proxy response; inspect evaluated world tracks at trigger; Retain approved response displacement, torso rotation, delayed recovery and proxy expansion; no independent retiming",
+        "status": "SOURCE",
+        "source": "Explicit CSP causal_links; not inferred from motion"
+      }
+    },
+    {
+      "event_id": "EVT_PURSUIT",
+      "depends_on": "EVT_AIR",
+      "condition": {
+        "value": "Incoming object tangent / contact normal determines receiver and proxy response; inspect evaluated world tracks at trigger; Retain approved response displacement, torso rotation, delayed recovery and proxy expansion; no independent retiming",
+        "status": "SOURCE",
+        "source": "Explicit CSP causal_links; not inferred from motion"
+      }
+    },
+    {
+      "event_id": "EVT_GUARD",
+      "depends_on": "EVT_PURSUIT",
+      "condition": {
+        "value": "Incoming object tangent / contact normal determines receiver and proxy response; inspect evaluated world tracks at trigger; Retain approved response displacement, torso rotation, delayed recovery and proxy expansion; no independent retiming",
+        "status": "SOURCE",
+        "source": "Explicit CSP causal_links; not inferred from motion"
+      }
+    },
+    {
+      "event_id": "EVT_CLASH",
+      "depends_on": "EVT_PURSUIT",
+      "condition": {
+        "value": "Incoming object tangent / contact normal determines receiver and proxy response; inspect evaluated world tracks at trigger; Retain approved response displacement, torso rotation, delayed recovery and proxy expansion; no independent retiming",
+        "status": "SOURCE",
+        "source": "Explicit CSP causal_links; not inferred from motion"
+      }
+    },
+    {
+      "event_id": "EVT_CLASH",
+      "depends_on": "EVT_GUARD",
+      "condition": {
+        "value": "Incoming object tangent / contact normal determines receiver and proxy response; inspect evaluated world tracks at trigger; Retain approved response displacement, torso rotation, delayed recovery and proxy expansion; no independent retiming",
+        "status": "SOURCE",
+        "source": "Explicit CSP causal_links; not inferred from motion"
+      }
+    }
+  ],
+  "overrides": []
+}

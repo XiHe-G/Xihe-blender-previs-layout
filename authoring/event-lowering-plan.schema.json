@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EVENT-LOWERING-PLAN/1.0",
+  "$defs": {
+    "plan": {
+      "type": "object",
+      "required": [
+        "lowering_version",
+        "plan_id",
+        "graph_id",
+        "event_id",
+        "event_type",
+        "lowering_status",
+        "input_evidence",
+        "required_inputs",
+        "resolved_inputs",
+        "derived_inputs",
+        "primitive_sequence",
+        "channel_plan",
+        "entry_state",
+        "exit_requirements",
+        "continuity_contract",
+        "dependencies",
+        "constraints",
+        "confidence",
+        "provenance",
+        "warnings",
+        "validation_status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "lowering_version": {
+          "const": "EVENT-LOWERING-PLAN/1.0"
+        },
+        "plan_id": {},
+        "graph_id": {},
+        "event_id": {},
+        "event_type": {},
+        "lowering_status": {
+          "enum": [
+            "READY",
+            "NEEDS_AUTHOR_INPUT",
+            "AMBIGUOUS",
+            "UNSUPPORTED",
+            "BLOCKED_BY_CONSTRAINT",
+            "BLOCKED_BY_OVERRIDE",
+            "BLOCKED_BY_UPSTREAM"
+          ]
+        },
+        "input_evidence": {},
+        "required_inputs": {},
+        "resolved_inputs": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "value",
+              "source",
+              "derived_from",
+              "method",
+              "confidence"
+            ],
+            "properties": {
+              "source": {
+                "enum": [
+                  "AUTHOR_EXPLICIT",
+                  "CONSTRAINT",
+                  "DEPENDENCY",
+                  "PREVIOUS_EXIT_STATE",
+                  "ENTITY_STATE",
+                  "DERIVED",
+                  "TECHNICAL_DEFAULT"
+                ]
+              },
+              "confidence": {
+                "enum": [
+                  "HIGH",
+                  "MEDIUM",
+                  "LOW"
+                ]
+              },
+              "method": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "derived_inputs": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "value",
+              "source",
+              "derived_from",
+              "method",
+              "confidence"
+            ],
+            "properties": {
+              "source": {
+                "enum": [
+                  "AUTHOR_EXPLICIT",
+                  "CONSTRAINT",
+                  "DEPENDENCY",
+                  "PREVIOUS_EXIT_STATE",
+                  "ENTITY_STATE",
+                  "DERIVED",
+                  "TECHNICAL_DEFAULT"
+                ]
+              },
+              "confidence": {
+                "enum": [
+                  "HIGH",
+                  "MEDIUM",
+                  "LOW"
+                ]
+              },
+              "method": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "primitive_sequence": {
+          "type": "array"
+        },
+        "channel_plan": {},
+        "entry_state": {},
+        "exit_requirements": {},
+        "continuity_contract": {},
+        "dependencies": {},
+        "constraints": {},
+        "confidence": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW"
+          ]
+        },
+        "provenance": {},
+        "warnings": {
+          "type": "array"
+        },
+        "validation_status": {
+          "enum": [
+            "NOT_RUN",
+            "PASS",
+            "FAIL"
+          ]
+        }
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/plan"
+    },
+    {
+      "type": "object",
+      "required": [
+        "lowering_version",
+        "graph_id",
+        "graph_sha256",
+        "context_sha256",
+        "plans",
+        "ready_for_execution",
+        "state_chain",
+        "runtime_invocations",
+        "builder_allowed",
+        "automatic_execution_of_unresolved"
+      ],
+      "properties": {
+        "lowering_version": {
+          "const": "EVENT-LOWERING-PLAN/1.0"
+        },
+        "plans": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/plan"
+          }
+        },
+        "builder_allowed": {
+          "type": "boolean"
+        },
+        "automatic_execution_of_unresolved": {
+          "const": false
+        }
+      }
+    }
+  ]
+}

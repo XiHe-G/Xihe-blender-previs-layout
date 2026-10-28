@@ -1,0 +1,19 @@
+{
+  "contract": "locomotion-profile",
+  "contract_version": "SYSTEM/2",
+  "locomotion_type": "HUMAN",
+  "acceleration_envelope": [
+    0.0,
+    3.0
+  ],
+  "cruise_range": [
+    0.0,
+    5.0
+  ],
+  "turn_radius": 0.5,
+  "stopping_distance": 1.0,
+  "vertical_mobility": "JUMP",
+  "bank_turn_tendency": "BODY_LEAN",
+  "support_mode": "SURFACE",
+  "runtime_binding": "Sprint008/MOTION-INTENSITY"
+}

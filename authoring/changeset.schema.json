@@ -1,0 +1,487 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "changeset_version": {
+      "const": "CHANGESET/1.0"
+    },
+    "changeset_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "base_graph_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "base_graph_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "change_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "change_type": {
+            "enum": [
+              "EVENT_TIMING_CHANGE",
+              "EVENT_SPATIAL_CHANGE",
+              "SHOT_INTENT_CHANGE",
+              "OVERRIDE_CHANGE"
+            ]
+          },
+          "target": {
+            "type": "string",
+            "minLength": 1
+          },
+          "channel": {
+            "type": "string",
+            "minLength": 1
+          },
+          "old_value": {},
+          "new_value": {},
+          "requested_by": {
+            "type": "string",
+            "minLength": 1
+          },
+          "provenance": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "change_id",
+          "change_type",
+          "target",
+          "channel",
+          "old_value",
+          "new_value",
+          "requested_by",
+          "provenance"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "execution_repair": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "const": "RELOWER_UNCHANGED_PLAN"
+        },
+        "proposal": {
+          "type": "object",
+          "properties": {
+            "schema_version": {
+              "const": "REPAIR-PROPOSAL/1.0"
+            },
+            "proposal_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "enum": [
+                "PENDING_HUMAN_APPROVAL",
+                "BLOCKED_BY_OVERRIDE"
+              ]
+            },
+            "source_checker_result": {
+              "type": "object"
+            },
+            "source_author_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "problem_type": {
+              "type": "string",
+              "minLength": 1
+            },
+            "severity": {
+              "enum": [
+                "CRITICAL",
+                "MAJOR",
+                "MINOR",
+                "INFO"
+              ]
+            },
+            "evidence": {
+              "type": "array"
+            },
+            "affected_subjects": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "time_range": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "likely_channels": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "repair_goal": {
+              "type": "object"
+            },
+            "candidate_strategies": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "strategy_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "label": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "modify": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "section": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "target": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "channel": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "frame_range": {
+                          "type": "array",
+                          "items": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "minItems": 2,
+                          "maxItems": 2
+                        }
+                      },
+                      "required": [
+                        "section",
+                        "target",
+                        "channel",
+                        "frame_range"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 1
+                  },
+                  "preserve": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "side_effect_risk": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "implementation_boundary": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "strategy_id",
+                  "label",
+                  "modify",
+                  "preserve",
+                  "side_effect_risk",
+                  "implementation_boundary"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            },
+            "estimated_affected_scope": {
+              "type": "object"
+            },
+            "protected_overrides": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            },
+            "risk": {
+              "type": "string",
+              "minLength": 1
+            },
+            "confidence": {
+              "enum": [
+                "HIGH",
+                "MEDIUM",
+                "LOW"
+              ]
+            },
+            "requires_human_approval": {
+              "const": true
+            },
+            "lowering_target": {
+              "type": "object",
+              "properties": {
+                "change_type": {
+                  "enum": [
+                    "SHOT_INTENT_CHANGE",
+                    "EVENT_SPATIAL_CHANGE"
+                  ]
+                },
+                "target": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "channel": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "change_type",
+                "target",
+                "channel"
+              ],
+              "additionalProperties": false
+            },
+            "graph_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "csp_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "execution_binding_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "override_registry_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          },
+          "required": [
+            "schema_version",
+            "proposal_id",
+            "status",
+            "source_checker_result",
+            "source_author_id",
+            "problem_type",
+            "severity",
+            "evidence",
+            "affected_subjects",
+            "time_range",
+            "likely_channels",
+            "repair_goal",
+            "candidate_strategies",
+            "estimated_affected_scope",
+            "protected_overrides",
+            "risk",
+            "confidence",
+            "requires_human_approval",
+            "lowering_target",
+            "graph_sha256",
+            "csp_sha256",
+            "execution_binding_sha256",
+            "override_registry_sha256"
+          ],
+          "additionalProperties": false,
+          "$schema": "https://json-schema.org/draft/2020-12/schema"
+        },
+        "decision": {
+          "type": "object",
+          "properties": {
+            "schema_version": {
+              "const": "REPAIR-DECISION/1.0"
+            },
+            "decision_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "proposal_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "proposal_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "decision": {
+              "enum": [
+                "APPROVE",
+                "REJECT",
+                "APPROVE_WITH_MODIFICATION",
+                "DEFER"
+              ]
+            },
+            "selected_strategy": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "allowed_channels": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "allowed_scope": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "section": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "target": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "channel": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "frame_range": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                },
+                "required": [
+                  "section",
+                  "target",
+                  "channel",
+                  "frame_range"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "protected_content": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "director_note": {
+              "type": "string",
+              "minLength": 1
+            },
+            "authority": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "HUMAN_USER_MESSAGE",
+                    "SYNTHETIC_UNIT_TEST"
+                  ]
+                },
+                "author": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "verbatim": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "kind",
+                "author",
+                "source",
+                "verbatim"
+              ],
+              "additionalProperties": false
+            },
+            "override_resolution": {
+              "type": [
+                "object",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "schema_version",
+            "decision_id",
+            "proposal_id",
+            "proposal_sha256",
+            "decision",
+            "selected_strategy",
+            "allowed_channels",
+            "allowed_scope",
+            "protected_content",
+            "director_note",
+            "authority",
+            "override_resolution"
+          ],
+          "additionalProperties": false,
+          "$schema": "https://json-schema.org/draft/2020-12/schema"
+        },
+        "proposal_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "mode",
+        "proposal",
+        "decision",
+        "proposal_id",
+        "decision_id"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "changeset_version",
+    "changeset_id",
+    "base_graph_id",
+    "base_graph_sha256",
+    "author",
+    "reason",
+    "changes"
+  ],
+  "additionalProperties": false
+}

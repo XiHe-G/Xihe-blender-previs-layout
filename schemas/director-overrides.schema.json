@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "blender-previs-layout/director-overrides.schema.json",
+  "title": "Blender Previs Layout V1 Director Overrides",
+  "type": "object",
+  "required": ["overrides"],
+  "properties": {
+    "version": {"const": "1.0"},
+    "overrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["shot", "target", "changes"],
+        "properties": {
+          "shot": {"type": "string"},
+          "target": {"type": "string", "pattern": "^(shot|camera|character:.+|action:.+|environment:.+)$"},
+          "changes": {"type": "object"}
+        }
+      }
+    }
+  }
+}

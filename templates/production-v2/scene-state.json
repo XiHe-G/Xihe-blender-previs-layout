@@ -1,0 +1,158 @@
+{
+  "contract": "scene-state",
+  "contract_version": "SYSTEM/2",
+  "scene_id": "SC01",
+  "sequence_id": "SEQ01",
+  "author_graph": "ag.json",
+  "csp": "csp.json",
+  "continuity_state": "continuity.json",
+  "world_axis": {
+    "up": "Z",
+    "forward": "Y",
+    "units": "METERS"
+  },
+  "landmarks": [
+    {
+      "id": "DOOR_A",
+      "position": [
+        0.0,
+        3.0,
+        0.0
+      ]
+    }
+  ],
+  "entrances": [
+    "DOOR_A"
+  ],
+  "exits": [
+    "DOOR_A"
+  ],
+  "walkable_regions": [
+    {
+      "id": "WALK_A",
+      "landmark_ids": [
+        "DOOR_A"
+      ]
+    }
+  ],
+  "height_bands": [
+    {
+      "id": "GROUND",
+      "minimum": 0.0,
+      "maximum": 2.0
+    }
+  ],
+  "depth_regions": {
+    "foreground": [
+      "DOOR_A"
+    ],
+    "middle": [],
+    "background": []
+  },
+  "key_occluders": [
+    "DOOR_A"
+  ],
+  "support_surfaces": [
+    {
+      "id": "FLOOR_A",
+      "landmark_ids": [
+        "DOOR_A"
+      ]
+    }
+  ],
+  "light_zones": [
+    {
+      "id": "ZONE_A",
+      "landmark_ids": [
+        "DOOR_A"
+      ]
+    }
+  ],
+  "persistent_props": [
+    "PROP_A"
+  ],
+  "boundaries": [
+    {
+      "shot_id": "SH01",
+      "ag_ref": "ag.json#/shots/SH01",
+      "csp_ref": "csp.json#/shots/SH01",
+      "continuity_ref": "continuity.json#/SH01",
+      "characters": [
+        {
+          "identity": "ACTOR_A",
+          "world_position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "screen_relation": "LEFT_OF_ACTOR_B",
+          "facing": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "gaze_target": "DOOR_A",
+          "height_profile": "IDENTITY_A",
+          "body_orientation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "prop_control": [
+            "PROP_A"
+          ],
+          "support": "FLOOR_A",
+          "motion_phase": "HOLD",
+          "action_trend": "OBSERVE",
+          "combat_state": "NONE",
+          "lighting_zone": "ZONE_A",
+          "terminal_state": "READY",
+          "visible": false,
+          "action_state": "WAIT",
+          "next_entrance_dependency": "SH02"
+        }
+      ]
+    },
+    {
+      "shot_id": "SH02",
+      "ag_ref": "ag.json#/shots/SH02",
+      "csp_ref": "csp.json#/shots/SH02",
+      "continuity_ref": "continuity.json#/SH02",
+      "characters": [
+        {
+          "identity": "ACTOR_A",
+          "world_position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "screen_relation": "LEFT_OF_ACTOR_B",
+          "facing": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "gaze_target": "DOOR_A",
+          "height_profile": "IDENTITY_A",
+          "body_orientation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "prop_control": [
+            "PROP_A"
+          ],
+          "support": "FLOOR_A",
+          "motion_phase": "HOLD",
+          "action_trend": "OBSERVE",
+          "combat_state": "NONE",
+          "lighting_zone": "ZONE_A",
+          "terminal_state": "READY",
+          "visible": true,
+          "action_state": "WAIT",
+          "next_entrance_dependency": ""
+        }
+      ]
+    }
+  ]
+}

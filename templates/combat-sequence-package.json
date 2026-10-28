@@ -1,0 +1,5602 @@
+{
+  "schema_version": "CSP/1.0",
+  "sequence_id": "TEXT_INTERFACE_EXAMPLE",
+  "layout_mode": "COMBAT_DYNAMIC",
+  "entry_mode": "TEXT",
+  "provenance": {
+    "authority": "DESIGN",
+    "scope": "Executable interface demonstration only; replace with approved project beats and trajectories"
+  },
+  "timebase": {
+    "fps": 30,
+    "frames": 60,
+    "frame_origin": 1,
+    "unit": "meter",
+    "up_axis": "+Z",
+    "forward_axis": "+Y"
+  },
+  "render": {
+    "width": 960,
+    "height": 540
+  },
+  "shot_plan": [
+    {
+      "id": "S1",
+      "first_frame": 1,
+      "end_frame_exclusive": 31,
+      "camera_id": "CAM_1",
+      "summary": "Compress, launch, recoil"
+    },
+    {
+      "id": "S2",
+      "first_frame": 31,
+      "end_frame_exclusive": 61,
+      "camera_id": "CAM_2",
+      "summary": "Same projectile exits while body recovers"
+    }
+  ],
+  "actor_assets": [
+    {
+      "id": "A",
+      "spec": {
+        "id": "A",
+        "height": 1.8,
+        "color": [
+          0.15,
+          0.62,
+          0.72
+        ],
+        "width_ratio": 0.26
+      }
+    }
+  ],
+  "actors": [
+    {
+      "id": "A",
+      "root": "CHAR_A",
+      "style": "COMBAT_BOX_4",
+      "meshes": [
+        "A__HEAD",
+        "A__NOSE",
+        "A__UPPER",
+        "A__LOWER"
+      ],
+      "pose_channels": [
+        "A__LOWER_CTRL",
+        "A__BODY_CTRL",
+        "A__HEAD_CTRL"
+      ]
+    }
+  ],
+  "primitive_assets": [
+    {
+      "id": "FLOOR",
+      "type": "CUBE",
+      "color": [
+        0.5,
+        0.53,
+        0.58
+      ],
+      "state": {
+        "location": [
+          0,
+          1,
+          -0.1
+        ],
+        "rotation_mode": "XYZ",
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          9,
+          10,
+          0.2
+        ],
+        "hide_render": false,
+        "hide_viewport": false
+      }
+    },
+    {
+      "id": "SCALE_POST",
+      "type": "CUBE",
+      "color": [
+        0.32,
+        0.34,
+        0.4
+      ],
+      "state": {
+        "location": [
+          2,
+          3,
+          1
+        ],
+        "rotation_mode": "XYZ",
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          0.2,
+          0.2,
+          2
+        ],
+        "hide_render": false,
+        "hide_viewport": false
+      }
+    },
+    {
+      "id": "BALL",
+      "type": "SPHERE",
+      "color": [
+        0.8,
+        0.3,
+        0.12
+      ]
+    },
+    {
+      "id": "CAM_1",
+      "type": "CAMERA"
+    },
+    {
+      "id": "CAM_2",
+      "type": "CAMERA"
+    }
+  ],
+  "object_tracks": {
+    "BALL": [
+      {
+        "frame": 1,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.06,
+            0.06,
+            0.06
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 2,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.06,
+            0.06,
+            0.06
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 3,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.06,
+            0.06,
+            0.06
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 4,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.06,
+            0.06,
+            0.06
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 5,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.06,
+            0.06,
+            0.06
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 6,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.06,
+            0.06,
+            0.06
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 7,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.06,
+            0.06,
+            0.06
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 8,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.06,
+            0.06,
+            0.06
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 9,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.06,
+            0.06,
+            0.06
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 10,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.06,
+            0.06,
+            0.06
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 11,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.06320408063286076,
+            0.06320408063286076,
+            0.06320408063286076
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 12,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.07199738818438599,
+            0.07199738818438599,
+            0.07199738818438599
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 13,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.0851515211339901,
+            0.0851515211339901,
+            0.0851515211339901
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 14,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.10143807796108747,
+            0.10143807796108747,
+            0.10143807796108747
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 15,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.11962865714509249,
+            0.11962865714509249,
+            0.11962865714509249
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 16,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.1384948571654196,
+            0.1384948571654196,
+            0.1384948571654196
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 17,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.1568082765014832,
+            0.1568082765014832,
+            0.1568082765014832
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 18,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.1733405136326977,
+            0.1733405136326977,
+            0.1733405136326977
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 19,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.18686316703847747,
+            0.18686316703847747,
+            0.18686316703847747
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 20,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.19614783519823695,
+            0.19614783519823695,
+            0.19614783519823695
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 21,
+        "state": {
+          "location": [
+            0,
+            0.65,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.19996611659139055,
+            0.19996611659139055,
+            0.19996611659139055
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 22,
+        "state": {
+          "location": [
+            0,
+            0.7249122461051805,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 23,
+        "state": {
+          "location": [
+            0,
+            0.8406301910727585,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 24,
+        "state": {
+          "location": [
+            0,
+            0.9734053346013883,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 25,
+        "state": {
+          "location": [
+            0,
+            1.11836069390933,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 26,
+        "state": {
+          "location": [
+            0,
+            1.273009662020423,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 27,
+        "state": {
+          "location": [
+            0,
+            1.43580483476546,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 28,
+        "state": {
+          "location": [
+            0,
+            1.6056768048350207,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 29,
+        "state": {
+          "location": [
+            0,
+            1.7818361115212396,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 30,
+        "state": {
+          "location": [
+            0,
+            1.9636727470239785,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 31,
+        "state": {
+          "location": [
+            0,
+            2.1506992836503813,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 32,
+        "state": {
+          "location": [
+            0,
+            2.342516083717645,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 33,
+        "state": {
+          "location": [
+            0,
+            2.5387887343012,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 34,
+        "state": {
+          "location": [
+            0,
+            2.739232725025239,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 35,
+        "state": {
+          "location": [
+            0,
+            2.9436026530869697,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 36,
+        "state": {
+          "location": [
+            0,
+            3.1516843833383845,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 37,
+        "state": {
+          "location": [
+            0,
+            3.3632892076658596,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 38,
+        "state": {
+          "location": [
+            0,
+            3.5782493985193526,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 39,
+        "state": {
+          "location": [
+            0,
+            3.7964147600276026,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 40,
+        "state": {
+          "location": [
+            0,
+            4.017649909047048,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 41,
+        "state": {
+          "location": [
+            0,
+            4.2418321008176285,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 42,
+        "state": {
+          "location": [
+            0,
+            4.4688494679942625,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 43,
+        "state": {
+          "location": [
+            0,
+            4.698599578269869,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 44,
+        "state": {
+          "location": [
+            0,
+            4.930988240913097,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 45,
+        "state": {
+          "location": [
+            0,
+            5.1659285101849095,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 46,
+        "state": {
+          "location": [
+            0,
+            5.403339846215609,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 47,
+        "state": {
+          "location": [
+            0,
+            5.643147403093943,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 48,
+        "state": {
+          "location": [
+            0,
+            5.885281420682568,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 49,
+        "state": {
+          "location": [
+            0,
+            6.129676701727768,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 50,
+        "state": {
+          "location": [
+            0,
+            6.376272159654218,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 51,
+        "state": {
+          "location": [
+            0,
+            6.625010425359905,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 52,
+        "state": {
+          "location": [
+            0,
+            6.8758375035863875,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.2,
+            0.2,
+            0.2
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 53,
+        "state": {
+          "location": [
+            0,
+            7.128702471203186,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.14814814814814797,
+            0.14814814814814797,
+            0.14814814814814797
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 54,
+        "state": {
+          "location": [
+            0,
+            7.383557211133287,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.05185185185185204,
+            0.05185185185185204,
+            0.05185185185185204
+          ],
+          "hide_render": false,
+          "hide_viewport": false
+        }
+      },
+      {
+        "frame": 55,
+        "state": {
+          "location": [
+            0,
+            7.640356176748874,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.001,
+            0.001,
+            0.001
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 56,
+        "state": {
+          "location": [
+            0,
+            7.899056182447575,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.001,
+            0.001,
+            0.001
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 57,
+        "state": {
+          "location": [
+            0,
+            8.1596162168298,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.001,
+            0.001,
+            0.001
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 58,
+        "state": {
+          "location": [
+            0,
+            8.421997275473565,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.001,
+            0.001,
+            0.001
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 59,
+        "state": {
+          "location": [
+            0,
+            8.686162210773412,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.001,
+            0.001,
+            0.001
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      },
+      {
+        "frame": 60,
+        "state": {
+          "location": [
+            0,
+            8.952075596695904,
+            1.25
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.001,
+            0.001,
+            0.001
+          ],
+          "hide_render": true,
+          "hide_viewport": true
+        }
+      }
+    ],
+    "CAM_1": [
+      {
+        "frame": 1,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 2,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 3,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 4,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 5,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 6,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 7,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 8,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 9,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 10,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 11,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 12,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 13,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 14,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 15,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 16,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 17,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 18,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 19,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 20,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 21,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 22,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 23,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 24,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 25,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 26,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 27,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 28,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 29,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 30,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 31,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 32,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 33,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 34,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 35,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 36,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 37,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 38,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 39,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 40,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 41,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 42,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 43,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 44,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 45,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 46,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 47,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 48,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 49,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 50,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 51,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 52,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 53,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 54,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 55,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 56,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 57,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 58,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 59,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 60,
+        "state": {
+          "location": [
+            3,
+            -7,
+            3
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.3139824093740895,
+            0,
+            0.40489178628508343
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      }
+    ],
+    "CAM_2": [
+      {
+        "frame": 1,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 2,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 3,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 4,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 5,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 6,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 7,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 8,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 9,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 10,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 11,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 12,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 13,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 14,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 15,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 16,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 17,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 18,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 19,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 20,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 21,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 22,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 23,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 24,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 25,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 26,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 27,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 28,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 29,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 30,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 31,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 32,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 33,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 34,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 35,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 36,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 37,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 38,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 39,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 40,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 41,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 42,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 43,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 44,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 45,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 46,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 47,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 48,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 49,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 50,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 51,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 52,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 53,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 54,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 55,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 56,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 57,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 58,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 59,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      },
+      {
+        "frame": 60,
+        "state": {
+          "location": [
+            4,
+            -6,
+            2.5
+          ],
+          "rotation_mode": "XYZ",
+          "rotation": [
+            1.365708374282545,
+            0,
+            0.5880026035475675
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "hide_render": false,
+          "hide_viewport": false,
+          "lens": 45
+        }
+      }
+    ]
+  },
+  "actor_pose_tracks": {
+    "A": [
+      {
+        "frame": 1,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 0,
+          "lower_pitch": 0,
+          "head_pitch": 0,
+          "compression": 1.0
+        }
+      },
+      {
+        "frame": 2,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 0,
+          "lower_pitch": 0,
+          "head_pitch": 0,
+          "compression": 1.0
+        }
+      },
+      {
+        "frame": 3,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 0,
+          "lower_pitch": 0,
+          "head_pitch": 0,
+          "compression": 1.0
+        }
+      },
+      {
+        "frame": 4,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 0,
+          "lower_pitch": 0,
+          "head_pitch": 0,
+          "compression": 1.0
+        }
+      },
+      {
+        "frame": 5,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 0.4722222222222221,
+          "lower_pitch": 0.15740740740740736,
+          "head_pitch": -0.11805555555555552,
+          "compression": 0.9956712962962962
+        }
+      },
+      {
+        "frame": 6,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 1.7777777777777772,
+          "lower_pitch": 0.5925925925925924,
+          "head_pitch": -0.4444444444444443,
+          "compression": 0.9837037037037037
+        }
+      },
+      {
+        "frame": 7,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 3.75,
+          "lower_pitch": 1.25,
+          "head_pitch": -0.9375,
+          "compression": 0.965625
+        }
+      },
+      {
+        "frame": 8,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 6.222222222222221,
+          "lower_pitch": 2.074074074074074,
+          "head_pitch": -1.5555555555555554,
+          "compression": 0.942962962962963
+        }
+      },
+      {
+        "frame": 9,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 9.027777777777777,
+          "lower_pitch": 3.009259259259259,
+          "head_pitch": -2.256944444444444,
+          "compression": 0.9172453703703703
+        }
+      },
+      {
+        "frame": 10,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 11.999999999999996,
+          "lower_pitch": 3.999999999999999,
+          "head_pitch": -2.999999999999999,
+          "compression": 0.89
+        }
+      },
+      {
+        "frame": 11,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 14.972222222222218,
+          "lower_pitch": 4.99074074074074,
+          "head_pitch": -3.7430555555555545,
+          "compression": 0.8627546296296297
+        }
+      },
+      {
+        "frame": 12,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 17.777777777777775,
+          "lower_pitch": 5.925925925925925,
+          "head_pitch": -4.444444444444444,
+          "compression": 0.837037037037037
+        }
+      },
+      {
+        "frame": 13,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 20.250000000000007,
+          "lower_pitch": 6.750000000000002,
+          "head_pitch": -5.062500000000002,
+          "compression": 0.814375
+        }
+      },
+      {
+        "frame": 14,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 22.222222222222225,
+          "lower_pitch": 7.407407407407408,
+          "head_pitch": -5.555555555555556,
+          "compression": 0.7962962962962963
+        }
+      },
+      {
+        "frame": 15,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 23.52777777777778,
+          "lower_pitch": 7.842592592592593,
+          "head_pitch": -5.881944444444445,
+          "compression": 0.7843287037037037
+        }
+      },
+      {
+        "frame": 16,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 24,
+          "lower_pitch": 8,
+          "head_pitch": -6,
+          "compression": 0.78
+        }
+      },
+      {
+        "frame": 17,
+        "state": {
+          "position": [
+            0,
+            -0.013333333333333332,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 21.037037037037038,
+          "lower_pitch": 8,
+          "head_pitch": -6,
+          "compression": 0.7925925925925926
+        }
+      },
+      {
+        "frame": 18,
+        "state": {
+          "position": [
+            0,
+            -0.04666666666666666,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 13.62962962962963,
+          "lower_pitch": 8,
+          "head_pitch": -6,
+          "compression": 0.8240740740740741
+        }
+      },
+      {
+        "frame": 19,
+        "state": {
+          "position": [
+            0,
+            -0.09,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 4.0,
+          "lower_pitch": 8,
+          "head_pitch": -6,
+          "compression": 0.865
+        }
+      },
+      {
+        "frame": 20,
+        "state": {
+          "position": [
+            0,
+            -0.13333333333333333,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -5.629629629629626,
+          "lower_pitch": 8,
+          "head_pitch": -6,
+          "compression": 0.905925925925926
+        }
+      },
+      {
+        "frame": 21,
+        "state": {
+          "position": [
+            0,
+            -0.16666666666666669,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -13.037037037037038,
+          "lower_pitch": 8,
+          "head_pitch": -6,
+          "compression": 0.9374074074074075
+        }
+      },
+      {
+        "frame": 22,
+        "state": {
+          "position": [
+            0,
+            -0.18,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -16,
+          "lower_pitch": 8,
+          "head_pitch": -6,
+          "compression": 0.9500000000000001
+        }
+      },
+      {
+        "frame": 23,
+        "state": {
+          "position": [
+            0,
+            -0.18,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -16,
+          "lower_pitch": 8,
+          "head_pitch": -6,
+          "compression": 0.9500000000000001
+        }
+      },
+      {
+        "frame": 24,
+        "state": {
+          "position": [
+            0,
+            -0.18,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -16,
+          "lower_pitch": 8,
+          "head_pitch": -6,
+          "compression": 0.9500000000000001
+        }
+      },
+      {
+        "frame": 25,
+        "state": {
+          "position": [
+            0,
+            -0.18,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -16,
+          "lower_pitch": 8,
+          "head_pitch": -6,
+          "compression": 0.9500000000000001
+        }
+      },
+      {
+        "frame": 26,
+        "state": {
+          "position": [
+            0,
+            -0.18,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -16,
+          "lower_pitch": 8,
+          "head_pitch": -6,
+          "compression": 0.9500000000000001
+        }
+      },
+      {
+        "frame": 27,
+        "state": {
+          "position": [
+            0,
+            -0.17986538530756216,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -15.988034249561082,
+          "lower_pitch": 7.994017124780541,
+          "head_pitch": -5.995512843585406,
+          "compression": 0.9500373929701217
+        }
+      },
+      {
+        "frame": 28,
+        "state": {
+          "position": [
+            0,
+            -0.17881438289601553,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -15.894611812979159,
+          "lower_pitch": 7.9473059064895795,
+          "head_pitch": -5.960479429867185,
+          "compression": 0.9503293380844402
+        }
+      },
+      {
+        "frame": 29,
+        "state": {
+          "position": [
+            0,
+            -0.17677860562214304,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -15.71365383307938,
+          "lower_pitch": 7.85682691653969,
+          "head_pitch": -5.892620187404768,
+          "compression": 0.950894831771627
+        }
+      },
+      {
+        "frame": 30,
+        "state": {
+          "position": [
+            0,
+            -0.17382716049382715,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -15.451303155006858,
+          "lower_pitch": 7.725651577503429,
+          "head_pitch": -5.794238683127572,
+          "compression": 0.9517146776406036
+        }
+      },
+      {
+        "frame": 31,
+        "state": {
+          "position": [
+            0,
+            -0.17002915451895043,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -15.113702623906704,
+          "lower_pitch": 7.556851311953352,
+          "head_pitch": -5.667638483965014,
+          "compression": 0.9527696793002917
+        }
+      },
+      {
+        "frame": 32,
+        "state": {
+          "position": [
+            0,
+            -0.16545369470539537,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -14.706995084924031,
+          "lower_pitch": 7.353497542462016,
+          "head_pitch": -5.515123156846512,
+          "compression": 0.9540406403596124
+        }
+      },
+      {
+        "frame": 33,
+        "state": {
+          "position": [
+            0,
+            -0.1601698880610445,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -14.237323383203957,
+          "lower_pitch": 7.118661691601979,
+          "head_pitch": -5.338996268701484,
+          "compression": 0.9555083644274877
+        }
+      },
+      {
+        "frame": 34,
+        "state": {
+          "position": [
+            0,
+            -0.15424684159378033,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -13.710830363891585,
+          "lower_pitch": 6.8554151819457925,
+          "head_pitch": -5.141561386459345,
+          "compression": 0.9571536551128389
+        }
+      },
+      {
+        "frame": 35,
+        "state": {
+          "position": [
+            0,
+            -0.14775366231148543,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -13.133658872132038,
+          "lower_pitch": 6.566829436066019,
+          "head_pitch": -4.925122077049514,
+          "compression": 0.9589573160245874
+        }
+      },
+      {
+        "frame": 36,
+        "state": {
+          "position": [
+            0,
+            -0.14075945722204222,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -12.51195175307042,
+          "lower_pitch": 6.25597587653521,
+          "head_pitch": -4.6919819074014075,
+          "compression": 0.960900150771655
+        }
+      },
+      {
+        "frame": 37,
+        "state": {
+          "position": [
+            0,
+            -0.1333333333333333,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -11.851851851851851,
+          "lower_pitch": 5.925925925925926,
+          "head_pitch": -4.444444444444445,
+          "compression": 0.962962962962963
+        }
+      },
+      {
+        "frame": 38,
+        "state": {
+          "position": [
+            0,
+            -0.12554439765324116,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -11.159502013621434,
+          "lower_pitch": 5.579751006810717,
+          "head_pitch": -4.184813255108038,
+          "compression": 0.965126556207433
+        }
+      },
+      {
+        "frame": 39,
+        "state": {
+          "position": [
+            0,
+            -0.11746175718964832,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -10.441045083524296,
+          "lower_pitch": 5.220522541762148,
+          "head_pitch": -3.915391906321611,
+          "compression": 0.9673717341139867
+        }
+      },
+      {
+        "frame": 40,
+        "state": {
+          "position": [
+            0,
+            -0.10915451895043728,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -9.702623906705536,
+          "lower_pitch": 4.851311953352768,
+          "head_pitch": -3.638483965014576,
+          "compression": 0.9696793002915453
+        }
+      },
+      {
+        "frame": 41,
+        "state": {
+          "position": [
+            0,
+            -0.10069178994349062,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -8.950381328310279,
+          "lower_pitch": 4.475190664155139,
+          "head_pitch": -3.356392998116354,
+          "compression": 0.9720300583490304
+        }
+      },
+      {
+        "frame": 42,
+        "state": {
+          "position": [
+            0,
+            -0.09214267717669074,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -8.19046019348362,
+          "lower_pitch": 4.09523009674181,
+          "head_pitch": -3.071422572556358,
+          "compression": 0.9744048118953638
+        }
+      },
+      {
+        "frame": 43,
+        "state": {
+          "position": [
+            0,
+            -0.0835762876579203,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -7.429003347370694,
+          "lower_pitch": 3.714501673685347,
+          "head_pitch": -2.78587625526401,
+          "compression": 0.9767843645394666
+        }
+      },
+      {
+        "frame": 44,
+        "state": {
+          "position": [
+            0,
+            -0.0750617283950617,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -6.6721536351165955,
+          "lower_pitch": 3.3360768175582978,
+          "head_pitch": -2.5020576131687235,
+          "compression": 0.9791495198902607
+        }
+      },
+      {
+        "frame": 45,
+        "state": {
+          "position": [
+            0,
+            -0.06666810639599756,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -5.9260539018664495,
+          "lower_pitch": 2.9630269509332248,
+          "head_pitch": -2.2222702131999186,
+          "compression": 0.9814810815566675
+        }
+      },
+      {
+        "frame": 46,
+        "state": {
+          "position": [
+            0,
+            -0.058464528668610266,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -5.196846992765357,
+          "lower_pitch": 2.5984234963826784,
+          "head_pitch": -1.9488176222870086,
+          "compression": 0.9837598531476083
+        }
+      },
+      {
+        "frame": 47,
+        "state": {
+          "position": [
+            0,
+            -0.05052010222078243,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -4.490675752958438,
+          "lower_pitch": 2.245337876479219,
+          "head_pitch": -1.6840034073594143,
+          "compression": 0.9859666382720049
+        }
+      },
+      {
+        "frame": 48,
+        "state": {
+          "position": [
+            0,
+            -0.04290393406039661,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -3.8136830275908107,
+          "lower_pitch": 1.9068415137954053,
+          "head_pitch": -1.4301311353465538,
+          "compression": 0.9880822405387788
+        }
+      },
+      {
+        "frame": 49,
+        "state": {
+          "position": [
+            0,
+            -0.03568513119533523,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -3.1720116618075753,
+          "lower_pitch": 1.5860058309037877,
+          "head_pitch": -1.189504373177841,
+          "compression": 0.9900874635568514
+        }
+      },
+      {
+        "frame": 50,
+        "state": {
+          "position": [
+            0,
+            -0.02893280063348086,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -2.5718045007538546,
+          "lower_pitch": 1.2859022503769273,
+          "head_pitch": -0.9644266877826952,
+          "compression": 0.9919631109351443
+        }
+      },
+      {
+        "frame": 51,
+        "state": {
+          "position": [
+            0,
+            -0.022716049382716014,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -2.0192043895747567,
+          "lower_pitch": 1.0096021947873783,
+          "head_pitch": -0.7572016460905342,
+          "compression": 0.993689986282579
+        }
+      },
+      {
+        "frame": 52,
+        "state": {
+          "position": [
+            0,
+            -0.017103984450923204,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -1.5203541734153951,
+          "lower_pitch": 0.7601770867076976,
+          "head_pitch": -0.5701328150307727,
+          "compression": 0.995248893208077
+        }
+      },
+      {
+        "frame": 53,
+        "state": {
+          "position": [
+            0,
+            -0.012165712845984944,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -1.0813966974208835,
+          "lower_pitch": 0.5406983487104418,
+          "head_pitch": -0.4055237615328311,
+          "compression": 0.9966206353205598
+        }
+      },
+      {
+        "frame": 54,
+        "state": {
+          "position": [
+            0,
+            -0.007970341575783746,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -0.7084748067363336,
+          "lower_pitch": 0.3542374033681668,
+          "head_pitch": -0.2656780525261251,
+          "compression": 0.997786016228949
+        }
+      },
+      {
+        "frame": 55,
+        "state": {
+          "position": [
+            0,
+            -0.004586977648202123,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -0.4077313465068553,
+          "lower_pitch": 0.20386567325342764,
+          "head_pitch": -0.1528992549400705,
+          "compression": 0.9987258395421661
+        }
+      },
+      {
+        "frame": 56,
+        "state": {
+          "position": [
+            0,
+            -0.0020847280711226157,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -0.18530916187756574,
+          "lower_pitch": 0.09265458093878287,
+          "head_pitch": -0.06949093570408671,
+          "compression": 0.9994209088691327
+        }
+      },
+      {
+        "frame": 57,
+        "state": {
+          "position": [
+            0,
+            -0.0005326998524277371,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": -0.04735109799357673,
+          "lower_pitch": 0.023675548996788365,
+          "head_pitch": -0.017756661747591274,
+          "compression": 0.9998520278187701
+        }
+      },
+      {
+        "frame": 58,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 0,
+          "lower_pitch": 0,
+          "head_pitch": 0,
+          "compression": 1.0
+        }
+      },
+      {
+        "frame": 59,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 0,
+          "lower_pitch": 0,
+          "head_pitch": 0,
+          "compression": 1.0
+        }
+      },
+      {
+        "frame": 60,
+        "state": {
+          "position": [
+            0,
+            0.0,
+            0
+          ],
+          "grounded": true,
+          "body_pitch": 0,
+          "lower_pitch": 0,
+          "head_pitch": 0,
+          "compression": 1.0
+        }
+      }
+    ]
+  },
+  "action_beats": [
+    {
+      "event_id": "LAUNCH_01",
+      "owner": "A",
+      "target": "open space",
+      "interval_s": [
+        0,
+        2
+      ],
+      "outcome": "Forward launch and recoil; no invented contact",
+      "breakdowns": [
+        0,
+        0.3,
+        0.5,
+        0.67,
+        0.8,
+        1,
+        1.3,
+        1.7,
+        2
+      ],
+      "phases": {
+        "PREPARE": {
+          "status": "APPLIES",
+          "interval_s": [
+            0,
+            0.3
+          ]
+        },
+        "COMPRESS": {
+          "status": "APPLIES",
+          "interval_s": [
+            0.3,
+            0.5
+          ]
+        },
+        "ACCELERATE": {
+          "status": "APPLIES",
+          "interval_s": [
+            0.5,
+            0.67
+          ]
+        },
+        "PEAK": {
+          "status": "APPLIES",
+          "interval_s": [
+            0.67,
+            0.8
+          ]
+        },
+        "CONTACT": {
+          "status": "NA",
+          "reason": "This launch has no impact target"
+        },
+        "FOLLOW_THROUGH": {
+          "status": "APPLIES",
+          "interval_s": [
+            0.8,
+            1.3
+          ]
+        },
+        "RECOVERY": {
+          "status": "APPLIES",
+          "interval_s": [
+            1.3,
+            2
+          ]
+        }
+      }
+    }
+  ],
+  "rhythm_map": [
+    {
+      "interval_s": [
+        0,
+        0.5
+      ],
+      "label": "coil"
+    },
+    {
+      "interval_s": [
+        0.5,
+        0.8
+      ],
+      "label": "burst"
+    },
+    {
+      "interval_s": [
+        0.8,
+        2
+      ],
+      "label": "follow and recover"
+    }
+  ],
+  "causal_links": [],
+  "screen_targets": [
+    {
+      "shot_id": "S1",
+      "authority": "DESIGN",
+      "key_states": [
+        {
+          "time_s": 0,
+          "A": {
+            "center_uv": [
+              0.5,
+              0.5
+            ],
+            "size_uv": [
+              0.2,
+              0.6
+            ]
+          }
+        }
+      ],
+      "major_occlusion": "none; floor and side post provide scale",
+      "screen_direction": "projectile moves toward upper-depth; A remains visible"
+    },
+    {
+      "shot_id": "S2",
+      "authority": "DESIGN",
+      "key_states": [
+        {
+          "time_s": 1,
+          "A": {
+            "center_uv": [
+              0.5,
+              0.5
+            ],
+            "size_uv": [
+              0.2,
+              0.6
+            ]
+          }
+        }
+      ],
+      "major_occlusion": "none; floor and side post provide scale",
+      "screen_direction": "projectile moves toward upper-depth; A remains visible"
+    }
+  ],
+  "camera_choreography": [
+    {
+      "shot_id": "S1",
+      "states": [
+        {
+          "state": "Hold",
+          "interval_s": [
+            0,
+            1
+          ],
+          "trigger": "Observe launch/recovery",
+          "delay_s": 0,
+          "entry_speed": 0,
+          "exit_speed": 0,
+          "framing_goal": "Keep body and projectile release corridor visible"
+        }
+      ]
+    },
+    {
+      "shot_id": "S2",
+      "states": [
+        {
+          "state": "Hold",
+          "interval_s": [
+            1,
+            2
+          ],
+          "trigger": "Observe launch/recovery",
+          "delay_s": 0,
+          "entry_speed": 0,
+          "exit_speed": 0,
+          "framing_goal": "Keep body and projectile release corridor visible"
+        }
+      ]
+    }
+  ],
+  "proxy_lifecycles": [
+    {
+      "id": "BALL",
+      "event_id": "LAUNCH_01",
+      "role": "VFX_MOTION_PROXY",
+      "owner": "A",
+      "target": "open space",
+      "visible_intervals_s": [
+        [
+          0.3,
+          1.8
+        ]
+      ],
+      "stages": {
+        "Spawn": {
+          "status": "APPLIES",
+          "interval_s": [
+            0.3,
+            0.4
+          ]
+        },
+        "Build": {
+          "status": "APPLIES",
+          "interval_s": [
+            0.4,
+            0.67
+          ]
+        },
+        "Travel": {
+          "status": "APPLIES",
+          "interval_s": [
+            0.67,
+            1.7
+          ]
+        },
+        "Impact": {
+          "status": "NA",
+          "reason": "Near miss / no separate impact or expansion"
+        },
+        "Expansion": {
+          "status": "NA",
+          "reason": "Near miss / no separate impact or expansion"
+        },
+        "Dissipation": {
+          "status": "APPLIES",
+          "interval_s": [
+            1.7,
+            1.8
+          ]
+        }
+      },
+      "end_state": "HIDDEN_AFTER_EXIT"
+    }
+  ],
+  "continuity_states": [
+    {
+      "cut_frame": 31,
+      "before_frame": 30,
+      "after_frame": 31,
+      "active_event_ids": [
+        "LAUNCH_01"
+      ],
+      "state_evidence": "Same actor_pose_tracks and BALL object track through both cameras",
+      "phase_state": {
+        "LAUNCH_01": [
+          "FOLLOW_THROUGH"
+        ]
+      },
+      "ownership": {
+        "BALL": "A"
+      }
+    }
+  ],
+  "review_gates": {
+    "ACTION_READABILITY": {
+      "status": "NOT_REVIEWED",
+      "evidence": "Interface example requires project-specific visual review"
+    },
+    "CUT_CONTINUITY": {
+      "status": "NOT_REVIEWED",
+      "evidence": "Interface example requires project-specific visual review"
+    },
+    "TIMING_SPACING": {
+      "status": "NOT_REVIEWED",
+      "evidence": "Interface example requires project-specific visual review"
+    },
+    "CAMERA_CHOREOGRAPHY": {
+      "status": "NOT_REVIEWED",
+      "evidence": "Interface example requires project-specific visual review"
+    },
+    "VFX_LIFECYCLE": {
+      "status": "NOT_REVIEWED",
+      "evidence": "Interface example requires project-specific visual review"
+    },
+    "RECOVERY": {
+      "status": "NOT_REVIEWED",
+      "evidence": "Interface example requires project-specific visual review"
+    },
+    "SILENT_REVIEW": {
+      "status": "NOT_REVIEWED",
+      "evidence": "Interface example requires project-specific visual review"
+    },
+    "FILE_RENDER_QA": {
+      "status": "NOT_REVIEWED",
+      "evidence": "Interface example requires project-specific visual review"
+    }
+  }
+}

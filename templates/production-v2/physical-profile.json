@@ -1,0 +1,20 @@
+{
+  "contract": "physical-profile",
+  "contract_version": "SYSTEM/2",
+  "identity": "ACTOR_A",
+  "body_scale": 1.0,
+  "mass_class": "HEAVY",
+  "mobility_class": "AGILE",
+  "locomotion_type": "HUMAN",
+  "current_load": "LIGHT",
+  "acceleration_capacity": "HIGH",
+  "cruise_profile": "RUN_CAPABLE",
+  "stopping_response": "BRACED",
+  "turn_response": "QUICK",
+  "impact_response": "BRACED",
+  "aerial_capability": "JUMP",
+  "story_intent": "CHASE",
+  "surface": "FLOOR_A",
+  "evidence_source": "AUTHOR_DEFINED_RELATIVE",
+  "motion_binding": "Sprint008/MOTION-INTENSITY"
+}

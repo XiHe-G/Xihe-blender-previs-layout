@@ -1,0 +1,15 @@
+# REPAIR-DECISION/1.0
+
+decision取APPROVE、REJECT、APPROVE_WITH_MODIFICATION、DEFER。只有前两种批准形式（APPROVE / APPROVE_WITH_MODIFICATION）可进入Changeset。
+
+必须记录decision_id、proposal_id、proposal_sha256、selected_strategy、allowed_channels、allowed_scope、protected_content、director_note、authority（用户消息来源与原文）、override_resolution。真实执行的authority.kind必须HUMAN_USER_MESSAGE；SYNTHETIC_UNIT_TEST记录不能运行真实流程。单元测试中的模拟消息结构不代表对任何真实工程授权。
+
+Decision只能选择提案中的策略。可收窄scope；不能超过候选modify区域、移除候选保护项或偷偷开放其他通道。修改方案若需要更宽范围，重新形成可审核提案并获得新的Decision。REJECT/DEFER不生成Changeset。Proposal/Graph/CSP/Binding/Registry变更导致旧Decision或Patch失效。
+
+LOCKED仍最高优先级。Decision若需解除/替换锁，必须内嵌完整S2 OVERRIDE-RESOLUTION/1.0（精确registry SHA、patch_id、引用Override、用户授权原文）。S4不自动解锁，S2最终执行保护。授权结构提供可追踪证据，不是密码学身份认证；本地JSON本身不能证明一段文字确实来自用户，操作方必须从真实对话登记。
+
+repair_to_changeset.py输出CHANGESET/1.0及execution_repair envelope，保留proposal_id/decision_id/完整provenance；不输出Execution Patch。旧非Repair无变化Changeset继续拒绝。
+
+复查：目标PASS+Enough、旧PASS不丢失、无新FAIL、WARNING不恶化、Unchanged Region=PASS、Override符合批准状态才可FIXED。部分目标改善为PARTIALLY_FIXED；目标仍失败为NOT_FIXED；新FAIL、旧PASS丢失、警告证据丢失/严重性升高或无关数据变动为REGRESSION_INTRODUCED；未执行/执行中止可ABORTED。审批待定阶段不伪造执行结果。警告数值变化但恶化无法确定时保留人工复核，不宣称完全FIXED。
+
+审计必须保存原Graph/CSP/Blend/Trace/Report、Proposal、真实Decision、Changeset、Affected Scope、局部Patch、新CSP/Blend/Trace/Report及结果/Unchanged Region。REPAIR-RECEIPT.json同时绑定原始文件SHA和流程canonical SHA，校验链不能仅凭编译成功。

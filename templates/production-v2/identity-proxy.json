@@ -1,0 +1,53 @@
+{
+  "contract": "identity-proxy",
+  "contract_version": "SYSTEM/2",
+  "identity": "ACTOR_A",
+  "core_proxy": "NARRATIVE_BOX_5",
+  "color": [
+    0.2,
+    0.4,
+    0.8
+  ],
+  "height_ratio": 1.0,
+  "head_width": 0.2,
+  "head_height": 0.25,
+  "head_body_proportion": 0.16,
+  "shoulder_width": 0.45,
+  "torso_width": 0.35,
+  "body_volume": 0.12,
+  "head_silhouette": "ROUND",
+  "anchors": [
+    {
+      "id": "EAR_A",
+      "kind": "EAR",
+      "parent": "HEAD",
+      "scale": [
+        0.1,
+        0.1,
+        0.2
+      ]
+    }
+  ],
+  "tail": "NONE",
+  "signature_prop": "PROP_A",
+  "special_shoulder_back_anchor": "NONE",
+  "source_refs": [
+    "character-sheet.png",
+    "height-chart.png"
+  ],
+  "simple_hands": [
+    {
+      "id": "HAND_R",
+      "side": "RIGHT",
+      "geometry": "SPHERE",
+      "relation": "GRIP",
+      "target_ref": "PROP_A/GRIP",
+      "anchor": [
+        0.2,
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "full_legs": false
+}

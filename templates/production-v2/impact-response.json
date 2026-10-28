@@ -1,0 +1,26 @@
+{
+  "contract": "impact-response",
+  "contract_version": "SYSTEM/2",
+  "mass_class_A": "LIGHT",
+  "mass_class_B": "HEAVY",
+  "relative_velocity": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "contact_direction": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "support_state": "SUPPORTED",
+  "contact_type": "BODY",
+  "response_candidates": [
+    "LIGHT_REACTION",
+    "BODY_SHIFT"
+  ],
+  "momentum_ref": "Sprint005/event",
+  "support_ref": "Sprint004/event",
+  "contact_intent_ref": "Sprint010/event",
+  "selection_authority": "DIRECTOR_REQUIRED"
+}

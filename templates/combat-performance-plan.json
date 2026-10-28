@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "layout_mode": "COMBAT_DYNAMIC",
+  "body_preset": "COMBAT_BOX_4",
+  "status": "DRAFT",
+  "usage": "Planning contract only; fill from source/approved design before project animation. Not executed by build_previs. Nulls/empty lists are unfilled, never PASS.",
+  "timebase": {
+    "source_path": null,
+    "source_fps": null,
+    "source_unique_interval_s": null,
+    "recording_pause_policy": null,
+    "output_fps": 30,
+    "frame_start": 1,
+    "interval_convention": "[start_s,end_s)",
+    "retime_segments": []
+  },
+  "actors": [],
+  "action_beats": [
+    {
+      "id": "BEAT_ID",
+      "actor_id": null,
+      "target_id": null,
+      "intent": null,
+      "output_interval_s": null,
+      "phase_times": {
+        "preparation": {
+          "source_interval_s": null,
+          "output_interval_s": null,
+          "na_reason": null
+        },
+        "acceleration": {
+          "source_interval_s": null,
+          "output_interval_s": null,
+          "na_reason": null
+        },
+        "burst": {
+          "source_interval_s": null,
+          "output_interval_s": null,
+          "na_reason": null
+        },
+        "hit_or_near_miss": {
+          "source_interval_s": null,
+          "output_interval_s": null,
+          "na_reason": null
+        },
+        "follow_through": {
+          "source_interval_s": null,
+          "output_interval_s": null,
+          "na_reason": null
+        },
+        "recovery": {
+          "source_interval_s": null,
+          "output_interval_s": null,
+          "na_reason": null
+        }
+      },
+      "trajectory": {
+        "owner": "ROOT_OR_COM",
+        "world_samples": [],
+        "screen_samples": [],
+        "screen_entry_exit": null,
+        "timing_spacing": null
+      },
+      "contact": {
+        "outcome": "UNRESOLVED",
+        "point_world": null,
+        "force_direction_world": null,
+        "time_s": null,
+        "reaction_beat_id": null,
+        "next_motion": null
+      },
+      "support_environment": [],
+      "proxy_ids": [],
+      "camera_event_ids": [],
+      "uncertainty": []
+    }
+  ],
+  "rhythm_map": [
+    {
+      "id": "RHYTHM_ID",
+      "output_interval_s": null,
+      "state": null,
+      "tension": null,
+      "speed_contrast": null,
+      "beat_ids": [],
+      "visual_focus": null,
+      "entry_trigger": null,
+      "exit_trigger": null
+    }
+  ],
+  "proxy_events": [
+    {
+      "id": "PROXY_ID",
+      "proxy_role": null,
+      "semantic": null,
+      "beat_id": null,
+      "owner_id": null,
+      "target_id": null,
+      "geometry": null,
+      "space": null,
+      "visible_interval_s": null,
+      "release_s": null,
+      "contact_s": null,
+      "world_samples": [],
+      "expansion_decay_samples": [],
+      "endpoint": null,
+      "clean_visible": true,
+      "hide_viewport_outside_interval": true,
+      "hide_render_outside_interval": true
+    }
+  ],
+  "camera_events": [
+    {
+      "id": "CAMERA_EVENT_ID",
+      "logic": null,
+      "beat_id": null,
+      "output_interval_s": null,
+      "trigger": null,
+      "lead_lag_s": null,
+      "target_or_lookahead": null,
+      "framing_margin": null,
+      "speed_profile": null,
+      "exit_state": null,
+      "shake_separate": true,
+      "source_or_design_basis": null
+    }
+  ],
+  "action_readability_gate": {
+    "status": "NOT_REVIEWED",
+    "beat_results": []
+  },
+  "silent_review": {
+    "status": "NOT_REVIEWED",
+    "audio_muted": null,
+    "camera_shake_zero": null,
+    "normal_speed": null,
+    "retained_layers": [
+      "COMBAT_BOX_4",
+      "ENVIRONMENT",
+      "ACTION_PROXY",
+      "WEAPON_PROXY",
+      "VFX_MOTION_PROXY",
+      "BASE_CAMERA"
+    ],
+    "criteria": [
+      "attacker_target",
+      "force_direction",
+      "speed_contrast",
+      "weight_contrast",
+      "contact_or_near_miss",
+      "next_motion"
+    ],
+    "evidence": [],
+    "issues": [],
+    "recheck": []
+  }
+}

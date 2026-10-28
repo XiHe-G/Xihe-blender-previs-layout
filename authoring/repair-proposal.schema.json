@@ -1,0 +1,234 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "REPAIR-PROPOSAL/1.0"
+    },
+    "proposal_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "PENDING_HUMAN_APPROVAL",
+        "BLOCKED_BY_OVERRIDE"
+      ]
+    },
+    "source_checker_result": {
+      "type": "object"
+    },
+    "source_author_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "problem_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "severity": {
+      "enum": [
+        "CRITICAL",
+        "MAJOR",
+        "MINOR",
+        "INFO"
+      ]
+    },
+    "evidence": {
+      "type": "array"
+    },
+    "affected_subjects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "time_range": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "likely_channels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "repair_goal": {
+      "type": "object"
+    },
+    "candidate_strategies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "strategy_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "modify": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "section": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "target": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "channel": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "frame_range": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              "required": [
+                "section",
+                "target",
+                "channel",
+                "frame_range"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "preserve": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "side_effect_risk": {
+            "type": "string",
+            "minLength": 1
+          },
+          "implementation_boundary": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "strategy_id",
+          "label",
+          "modify",
+          "preserve",
+          "side_effect_risk",
+          "implementation_boundary"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "estimated_affected_scope": {
+      "type": "object"
+    },
+    "protected_overrides": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "risk": {
+      "type": "string",
+      "minLength": 1
+    },
+    "confidence": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "requires_human_approval": {
+      "const": true
+    },
+    "lowering_target": {
+      "type": "object",
+      "properties": {
+        "change_type": {
+          "enum": [
+            "SHOT_INTENT_CHANGE",
+            "EVENT_SPATIAL_CHANGE"
+          ]
+        },
+        "target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "channel": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "change_type",
+        "target",
+        "channel"
+      ],
+      "additionalProperties": false
+    },
+    "graph_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "csp_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "execution_binding_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "override_registry_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "schema_version",
+    "proposal_id",
+    "status",
+    "source_checker_result",
+    "source_author_id",
+    "problem_type",
+    "severity",
+    "evidence",
+    "affected_subjects",
+    "time_range",
+    "likely_channels",
+    "repair_goal",
+    "candidate_strategies",
+    "estimated_affected_scope",
+    "protected_overrides",
+    "risk",
+    "confidence",
+    "requires_human_approval",
+    "lowering_target",
+    "graph_sha256",
+    "csp_sha256",
+    "execution_binding_sha256",
+    "override_registry_sha256"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

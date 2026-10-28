@@ -1,0 +1,148 @@
+{
+  "schema": "DIRECTOR_PLAN/1",
+  "fps": 24,
+  "start": 1,
+  "end": 145,
+  "frame_convention": "HALF_OPEN",
+  "shots": [
+    {
+      "id": "relation",
+      "start": 1,
+      "end": 49,
+      "purpose": "establish request",
+      "first_focus": "both",
+      "start_read": "shared space",
+      "end_read": "keeper hears",
+      "cut_reason": "new information or reaction",
+      "source": "independent authored text brief",
+      "events": [
+        {
+          "id": "relation_beat",
+          "frame": 30,
+          "observable": "keeper hears"
+        }
+      ],
+      "camera": {
+        "id": "NEW_relation",
+        "lens_mm": 40,
+        "motion": {
+          "kind": "STATIC_HOLD",
+          "start": [
+            0,
+            -5,
+            1.55
+          ],
+          "end": [
+            0,
+            -5,
+            1.55
+          ],
+          "aim_start": [
+            0,
+            0,
+            1.15
+          ],
+          "aim_end": [
+            0,
+            0,
+            1.15
+          ]
+        },
+        "movement_reason": "maintain action and reaction readability"
+      }
+    },
+    {
+      "id": "answer",
+      "start": 49,
+      "end": 105,
+      "purpose": "read hesitation",
+      "first_focus": "Keeper",
+      "start_read": "listening",
+      "end_read": "returns gaze",
+      "cut_reason": "new information or reaction",
+      "source": "independent authored text brief",
+      "events": [
+        {
+          "id": "answer_beat",
+          "frame": 78,
+          "observable": "returns gaze"
+        }
+      ],
+      "camera": {
+        "id": "NEW_answer",
+        "lens_mm": 58,
+        "motion": {
+          "kind": "STATIC_HOLD",
+          "start": [
+            -0.4,
+            -3,
+            1.55
+          ],
+          "end": [
+            -0.4,
+            -3,
+            1.55
+          ],
+          "aim_start": [
+            0.9,
+            0,
+            1.45
+          ],
+          "aim_end": [
+            0.9,
+            0,
+            1.45
+          ]
+        },
+        "movement_reason": "maintain action and reaction readability"
+      }
+    },
+    {
+      "id": "recognition",
+      "start": 105,
+      "end": 145,
+      "purpose": "read response",
+      "first_focus": "Courier",
+      "start_read": "waiting",
+      "end_read": "recognition",
+      "cut_reason": "new information or reaction",
+      "source": "independent authored text brief",
+      "events": [
+        {
+          "id": "recognition_beat",
+          "frame": 125,
+          "observable": "recognition"
+        }
+      ],
+      "camera": {
+        "id": "NEW_recognition",
+        "lens_mm": 58,
+        "motion": {
+          "kind": "STRAIGHT_TRANSLATION",
+          "start": [
+            0.25,
+            -3.4,
+            1.5
+          ],
+          "end": [
+            0.1,
+            -3.05,
+            1.5
+          ],
+          "aim_start": [
+            -0.9,
+            0,
+            1.4
+          ],
+          "aim_end": [
+            -0.9,
+            0,
+            1.4
+          ],
+          "curve": "EASE_IN_OUT"
+        },
+        "movement_reason": "maintain action and reaction readability"
+      }
+    }
+  ]
+}

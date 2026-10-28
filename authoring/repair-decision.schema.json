@@ -1,0 +1,140 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "REPAIR-DECISION/1.0"
+    },
+    "decision_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proposal_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proposal_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "decision": {
+      "enum": [
+        "APPROVE",
+        "REJECT",
+        "APPROVE_WITH_MODIFICATION",
+        "DEFER"
+      ]
+    },
+    "selected_strategy": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "allowed_channels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "allowed_scope": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "section": {
+            "type": "string",
+            "minLength": 1
+          },
+          "target": {
+            "type": "string",
+            "minLength": 1
+          },
+          "channel": {
+            "type": "string",
+            "minLength": 1
+          },
+          "frame_range": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "required": [
+          "section",
+          "target",
+          "channel",
+          "frame_range"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "protected_content": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "director_note": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authority": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "HUMAN_USER_MESSAGE",
+            "SYNTHETIC_UNIT_TEST"
+          ]
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verbatim": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "author",
+        "source",
+        "verbatim"
+      ],
+      "additionalProperties": false
+    },
+    "override_resolution": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "decision_id",
+    "proposal_id",
+    "proposal_sha256",
+    "decision",
+    "selected_strategy",
+    "allowed_channels",
+    "allowed_scope",
+    "protected_content",
+    "director_note",
+    "authority",
+    "override_resolution"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

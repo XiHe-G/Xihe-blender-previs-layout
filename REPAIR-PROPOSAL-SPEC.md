@@ -1,0 +1,13 @@
+# REPAIR-PROPOSAL/1.0
+
+Proposal是建议，不是Changeset。requires_human_approval固定true，无执行方法。
+
+准入：原Checker为FAIL，Evidence Sufficiency=ENOUGH，有逐帧证据；排除INFERRED及LOW、WARNING、NOT_REVIEWED。仅五类：SHOT_SIZE、SCREEN_POSITION、CAMERA_STATE、CONTACT/NEAR_MISS、RECOVERY。缺对象/缺测量/身份复杂轨迹/Action Phase/跨镜Screen Direction仍DIAGNOSTIC ONLY。
+
+字段：proposal_id、source_checker_result（report/result canonical SHA与原结果）、source_author_id、problem_type、severity、evidence、affected_subjects、time_range、likely_channels、repair_goal、candidate_strategies、estimated_affected_scope、protected_overrides、risk、confidence、requires_human_approval；额外保存Graph/CSP/执行Binding/Registry SHA及lowering_target。
+
+每个候选含strategy_id、label、modify（真实CSP通道选择器）、preserve、side_effect_risk、implementation_boundary。SHOT_SIZE提供静态Dolly、静态Lens和共同修正建议；LOCKED_HOLD不提持续运镜。Screen Position优先Camera；只有明确允许世界位置调整才出现有限Root备选。Near Miss不得删除Projectile或改变身份/可见性；Recovery只改既有采样。
+
+原目标expected_state/expected_range/behavior_profile必须保持；不得提议修改Plan位置/放宽阈值。冲突候选列明BLOCKED_BY_OVERRIDE；所有候选均冲突时Proposal状态也为BLOCKED_BY_OVERRIDE。未解决的冲突不能生成可执行Changeset，必须先有明确RELEASE/REPLACE_LOCK。
+
+HTML显示Problem、Evidence、全部候选、范围估计、风险、保护锁和Decision状态。没有执行按钮。五项本轮提案的权限以各JSON精确帧区间/目标/通道为准，文本风险不会隐式赋权。

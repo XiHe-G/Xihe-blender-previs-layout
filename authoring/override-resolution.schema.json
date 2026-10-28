@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "resolution_version": {
+      "const": "OVERRIDE-RESOLUTION/1.0"
+    },
+    "resolution_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "base_registry_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "patch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "resolutions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "override_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "decision": {
+            "enum": [
+              "KEEP_LOCKED",
+              "RELEASE",
+              "REPLACE_LOCK"
+            ]
+          },
+          "authorization": {
+            "type": "object",
+            "properties": {
+              "requested_by": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1
+              },
+              "quote": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "requested_by",
+              "source",
+              "quote",
+              "reason"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "override_id",
+          "decision",
+          "authorization"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "resolution_version",
+    "resolution_id",
+    "base_registry_sha256",
+    "patch_id",
+    "resolutions"
+  ],
+  "additionalProperties": false
+}

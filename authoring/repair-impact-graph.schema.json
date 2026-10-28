@@ -1,0 +1,76 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "REPAIR-IMPACT-GRAPH/1.0"
+    },
+    "preview_only": {
+      "const": true
+    },
+    "proposal_id": {
+      "type": "string"
+    },
+    "strategy_id": {
+      "type": "string"
+    },
+    "target_observable": {
+      "type": "string"
+    },
+    "directly_modified_channels": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "potentially_affected_observables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "protected_observables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "effective_protected_channels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "known_couplings": {
+      "type": "object"
+    },
+    "preserve": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "table_sha256": {
+      "type": "string"
+    },
+    "selection": {
+      "const": null
+    }
+  },
+  "required": [
+    "schema_version",
+    "preview_only",
+    "proposal_id",
+    "strategy_id",
+    "target_observable",
+    "directly_modified_channels",
+    "potentially_affected_observables",
+    "protected_observables",
+    "effective_protected_channels",
+    "known_couplings",
+    "preserve",
+    "table_sha256",
+    "selection"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

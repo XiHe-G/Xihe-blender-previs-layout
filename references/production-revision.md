@@ -1,0 +1,11 @@
+# Director revision record and dependency audit
+
+Status: INTERFACE_ONLY production revision execution; transitive query implemented. Record revision_id, actual source message/version, scene and target shots, original intent, requested change, allowed/protected channels, declared dependent shots, continuity/lighting edges, required outputs and validation evidence. Source version must match the working branch; never silently apply feedback against a different layout.
+
+`revision_query(record, shot_order)` validates all endpoints and inheritance acyclicity, traverses continuity AND lighting edges transitively, includes explicit dependencies, and preserves edit order. Missing derived dependent shots is a blocking contract error: update the record before applying. Shared-world/lighting dependencies can be explicitly listed when no linear edge expresses them. Bidirectional causal cycles must resolve to distinct event/boundary IDs on the existing timeline; do not manufacture a parallel timeline.
+
+The query returns DIRECTLY_MODIFIED, DEPENDENCY_CHECKED and UNCHANGED_PROTECTED **as planned categories** with `scope_status=PLANNED_NOT_EXECUTED` and `validation_status=NOT_REVIEWED`. It neither modifies nor certifies a shot. Completion requires hash-bound before/after evidence and native checks; merely providing validation_evidence strings cannot turn query output into PASS. A protected shot can still have protected channels within an affected shot; enforce both scopes.
+
+Workflow: resolve source authority → snapshot and fingerprint → query impact → apply authorized local changes through existing guarded S2 merge for registered locks → regenerate only authorized channels → inspect affected endpoints/cuts/lighting → compare protected channels → deliver exact revisions. If standing positions change under COMPOSITION_LOCK, Camera transforms may need solving; if Camera is protected, request/locate explicit camera permission before such edits. Invalidation is not permission to repair dependencies.
+
+Example: moving a group behind another actor in SH05A may affect SH06 and SH08 even when SH07 is an insert. Inspect their inherited states and lighting zones. Do not rebuild unrelated shots or silently freeze the group at its future destination. Evidence fields are records of external checks, not an executable audit engine.
